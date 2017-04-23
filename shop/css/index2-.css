@@ -1,0 +1,27 @@
+
+
+/*header 结束*/
+/*sale-brand 开始*/
+#sale-brand{
+    height: 316px;
+    margin-top: 30px;
+}
+#sale-brand h2,#product h2{
+    font-weight:600;
+}
+
+#sale-brand .brand img {
+    width: 120px;
+    height: 100px;
+    margin-right: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#sale-brand .brand{
+    float:left;
+
+}
+/*sale-brand 结束*/
+/*product 开始*/
+
+/*product 结束*/

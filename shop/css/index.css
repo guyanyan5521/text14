@@ -1,0 +1,132 @@
+body{
+    /*margin: 300px;*/
+    /*overflow: hidden;*/
+    height:2500px;
+}
+/*header开始*/
+#header{
+    background: url(../img/banner.jpg) no-repeat center;
+    height: 600px;
+
+}
+/* header 结束*/
+/*  new-product  开始*/
+#new-product{
+    margin-top: 56px;
+    height: 266px;
+}
+#new-product .sale{
+    width: 360px;
+    height: 220px;
+    background: url(../img/bg1.jpg) no-repeat;
+    float: left;
+    margin-right: 30px;
+}
+
+#new-product .sale h4{
+    margin-top: 150px;
+    margin-left: 200px;
+    color: #ffffff;
+    font-size:30px;
+
+}
+#new-product .bg2{
+    background: url(../img/bg2.jpg) no-repeat;
+}
+#new-product .bg3{
+    background: url(../img/bg3.jpg) no-repeat;
+    margin-right: 0;
+}
+
+
+/*new-product 结束*/
+/*product 开始*/
+#product{
+    height: 1000px;
+
+}
+.product-info{
+    width: 340px;
+    height: 440px;
+    border: 1px solid #cccccc;
+    float:left;
+    margin-right: 37px;
+    margin-top: 30px;
+}
+.product-info img{
+    width: 248px;
+    height: 248px;
+    border: 1px solid #cccccc;
+    display:block;
+    float: left;
+}
+.upper{
+    height: 250px;
+}
+.product-info .new{
+    background: #fa558f;
+    color: #ffffff;
+    float:right;
+}
+.product-detail{
+    height: 180px;
+    background:#fcf9ff;
+    padding-left: 16px;
+    padding-top: 10px;;
+
+}
+.product-detail h3{
+    margin-bottom: 20px;
+}
+.item_price{
+    display:block;
+    font-size:20px;
+    font-weight: bolder;
+}
+.add {
+    width: 150px;
+    height: 50px;
+    background: #ff4500;
+    boder: 0;
+    font-size: 20px;
+    margin-top: 5px;
+}
+.product-detail input{
+    width: 150px;
+    height: 30px;
+    text-indent: 10px;
+}
+/*product 结束*/
+/*problem 开始*/
+#problem{
+    height: 400px;
+    background: url(../img/banner2.jpg) no-repeat center;
+}
+#problem .wrapper{
+    width: 1000px;
+}
+.problem-menu{
+    padding-left: 40px;
+    float: left;
+    margin-right: 40px;
+    margin-top: 100px;
+}
+.problem-menu li{
+    list-style: disc;
+    color: #fff;
+    margin-top: 10px;
+}
+.problem-menu li a{
+    color: #fff;
+}
+.problem-menu li a:hover{
+    text-decoration: underline;
+}
+.menu-bold{
+    font-weight: bolder;
+}
+
+/*problem 结束*/
+/*footer 开始*/
+
+/*footer 结束*/

@@ -1,0 +1,224 @@
+/*css重置开始*/
+*{
+    margin: 0;
+    padding: 0;
+
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+
+}
+img{
+    border: 0;
+}
+li{
+    list-style: none;
+}
+/*css重置结束*/
+.wrapper{
+    width: 1140px;
+    height: 100%;
+    margin: 0 auto;
+
+
+}
+/*header开始*/
+
+#header {
+
+    height: 250px;
+    background: url(../img/banner33.jpg) no-repeat;
+
+    background-size: cover;
+}
+#login,#header h1{
+    color: #ffffff;
+    width: 380px;
+    float : left;
+
+}
+
+/*#cart{*/
+/*height: 22px;*/
+/*background: url(../img/cart.png) no-repeat center;*/
+/*}*/
+
+#cart {
+    width: 260px;
+    height: 30px;
+    background: #000 url(../img/cart.png) 230px center no-repeat;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    color: #ffffff;
+    padding: 10px 20px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    float: right;
+    margin-top: 25px;
+
+}
+
+
+#header img{
+    vertical-align: middle;
+
+}
+
+#login{
+    height:30px;
+    display:block;
+}
+#header  p{
+    color: #ffffff;
+    position: relative;
+    left: 170px;
+    top: 42.5px;
+    display: inline;
+
+}
+
+#main-header{
+    height: 100px;
+    line-height: 100px;
+
+}
+#nav>li{
+    width: 190px;
+    height: 40px;
+    background: #fa558f;
+    float: left;
+    margin-top: 10px;
+    line-height: 40px;
+    text-align: center;
+
+}
+#nav > li:hover{
+    background: #3c3b3b;
+}
+#nav  a{
+    width: 100%;
+    height: 100%;
+    display: block;
+
+}
+#nav .selected{
+    background: #3c3b3b;
+}
+#submenu{
+    width: 1140px;
+    height: 300px;
+    background: #ffffff;
+    margin-left: -190px;
+    display: none;
+}
+#makeup:hover #submenu{
+    display: block;
+    position:relative ;
+    z-index: 10000;
+
+}
+
+#nav #submenu .wrapper .menu-chunk{
+
+    height: 670px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+#nav  #submenu li{
+    height: 35px;
+    color:#000;
+    text-align:left;
+
+}
+#nav  #submenu a{
+    height: 35px;
+
+    color: #808080;
+
+}
+#nav  #submenu a:hover{
+    text-decoration: underline;
+    color: #fa558f;
+
+}
+#nav #submenu .wrapper .menu-chunk .small-menu{
+    width: 173px;
+
+    border-bottom: 1px solid #808080;
+}
+/* header 结束*/
+/*product 开始*/
+#product{
+    height: 1000px;
+
+}
+.product-info{
+    width: 340px;
+    height: 440px;
+    border: 1px solid #cccccc;
+    float:left;
+    margin-right: 37px;
+    margin-top: 30px;
+}
+
+.product-info img{
+    width: 248px;
+    height: 248px;
+    border: 1px solid #cccccc;
+    display:block;
+    float: left;
+}
+.upper{
+    height: 250px;
+}
+.product-detail{
+    height: 180px;
+    background:#fcf9ff;
+    padding-left: 16px;
+    padding-top: 10px;;
+
+}
+.product-detail h3{
+    margin-bottom: 20px;
+}
+.item_price{
+    display:block;
+    font-size:20px;
+    font-weight: bolder;
+}
+.add {
+    width: 150px;
+    height: 50px;
+    background: #ff4500;
+    boder: 0;
+    font-size: 20px;
+    margin-top: 5px;
+}
+.product-detail input{
+    width: 150px;
+    height: 30px;
+    text-indent: 10px;
+}
+/*product 结束*/
+/*footer 开始*/
+#footer{
+    height: 82px;
+    background: #fa558f;
+    line-height: 82px;
+    position: relative;
+
+}
+#footer h3{
+    float:left;
+    color: #ffffff;
+
+}
+#footer h4{
+    float:right;
+    color: #ffffff;
+}
+/*footer 结束*/
