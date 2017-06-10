@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+var i,sum= 1, n;
+    function getnumber( number) {
+        for (i = 1; i <= number; i++) {
+            sum = i * sum;
+
+        }
+        return sum;
+
+
+    }
+           var result=prompt("请输入要算阶乘的数");
+           n=getnumber(result);
+
+
+    document.write(result+"!="+n);
+</script>
+</body>
+</html>

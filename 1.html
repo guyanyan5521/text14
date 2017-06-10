@@ -4,19 +4,31 @@
     <meta charset="UTF-8">
     <title>my</title>
     <style>
-        h1{
-            background:#f00;
-        }
-        #ss{
-            background:#fff;
-        }
-        .ll{
-            background:#000;
-        }
+        /*h1{*/
+            /*background:#f00;*/
+        /*}*/
+        /*#ss{*/
+            /*background:#fff;*/
+        /*}*/
+        /*.ll{*/
+            /*background:#000;*/
+        /*}*/
     </style>
 </head>
 <body>
-<h1 id="ss" class="ll">1111</h1>
 
+<script >
+    var today = new Date();   //获取当天日期
+    var year = today.getFullYear();   //获取当天年份
+    document.write("today ="+ today );
+    document.write("year ="+ year);
+    if(year % 400 == 0){
+        document.write("该年份是闰年");
+    }
+    else{
+        document.write("该年份不是闰年");
+    }
+
+</script>
 </body>
 </html>

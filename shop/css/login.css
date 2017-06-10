@@ -22,14 +22,14 @@
     margin-top: 20px;
     display: block;
 }
-#login-information label input{
+#login-information label input {
     width: 400px;
     height: 38px;
     outline: none;
     text-indent: 10px;
     font-size: 20px;
 }
-/* 属性选择器 */
+ /* 属性选择器 */
 #login-information input[value="login"]{
     width: 114px;
     height: 41px;
@@ -73,6 +73,10 @@
     height: 42px;
     background: #fff;
     border: 1px solid #000;
+    color: #000000;
+    display:block;
+    text-align: center;
+    line-height: 42px;
 }
 #register .btn:hover {
     background: #EF8743;

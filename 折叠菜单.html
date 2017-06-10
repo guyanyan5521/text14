@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>折叠菜单</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #container {
+            width: 200px;
+            border: 1px solid #000000;
+        }
+        #container h3{
+            background: #000;
+            color: #ffffff;
+            text-align:center;
+            height: 40px;
+            line-height: 40px;
+            cursor: pointer;
+        }
+        .menu{
+            display:none;
+        }
+      .menu   li{
+            text-align:center;
+            height: 20px;
+            line-height: 20px;
+         
+        }
+        .menu   li:hover{
+            background: #999999;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+<ul id="container">
+    <li>
+        <h3>管理区</h3>
+                <ul class="menu">
+                    <li>001</li>
+                    <li>002</li>
+                    <li>003</li>
+                </ul>
+            </li>
+            <li>
+                <h3>交流区</h3>
+                <ul class="menu">
+                    <li>001</li>
+                    <li>002</li>
+                    <li>003</li>
+                </ul>
+            </li>
+
+</ul>
+<script>
+   var oContainer = document.getElementById("container");
+    var aH3 = oContainer.getElementsByTagName ("h3");
+    var aUl = oContainer.getElementsByTagName ("ul");
+    for(var i=0; i<aH3.length; i++){
+        aH3[i].index = i;
+        aH3[i].onclick = function (){
+            if( aUl[this.index].style.display =="block"){
+                aUl[this.index].style.display ="none";
+            }
+           else aUl[this.index].style.display ="block";
+
+        };
+    }
+
+
+
+</script>
+</body>
+</html>

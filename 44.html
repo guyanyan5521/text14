@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var i,sum=0,n=1;
+    function getnumber(number) {
+        for (i = 1; i <= number; i++) {
+            n = i * n;
+            sum = n + sum;
+        }
+        return sum;
+    }
+ sum=getnumber(10);
+    document.write("阶乘的和为"+sum);
+</script>
+</body>
+</html>
