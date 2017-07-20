@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>折叠菜单</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #container{
+            width: 200px;
+            border:1px solid #000;
+        }
+        #container h1{
+            text-align: center;
+            cursor: pointer;
+            background: #000000;
+            color: #ffffff;
+        }
+        .select li:hover{
+            background: #999999;
+            color: #ffffff;
+            
+        }
+        .select li{
+            text-align: center;
+        }
+        .select{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="manage">
+        <h1>管理区</h1>
+        <ul class="select">
+            <li>001</li>
+            <li>002</li>
+            <li>003</li>
+        </ul>
+    </div>
+    <div id="communication">
+        <h1>交流区</h1>
+        <ul class="select">
+            <li>001</li>
+            <li>002</li>
+            <li>003</li>
+        </ul>
+    </div>
+</div>
+<script>
+    var oContainer = document.getElementById ("container");
+    var aH1 = oContainer.getElementsByTagName ("h1");
+//    var oManage = document.getElementById ("manage");
+    var aul = oContainer .getElementsByTagName ("ul")
+    for(var i=0; i<aH1.length ;i++){
+        aH1[i].index=i;
+        aH1[i].onclick = function(){
+            if(aul[this.index].style.display=="block"){
+                aul[this.index].style.display="none";
+            }
+            else aul[this.index].style.display="block";
+        };
+        aH1[i].onselectstart = function(){
+            return false;
+        };
+
+
+    }
+</script>
+</body>
+</html>

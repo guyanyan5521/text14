@@ -89,6 +89,7 @@
     var oMark = document.getElementById ("mark");
     var aLi2 = oMark.getElementsByTagName ("li");
     var nowIndex = 0;
+    var timer;
     for(var i=0; i<aLi1.length; i++){
         aLi1[i].index=i;
         aLi1[i].onmouseover= function (){
@@ -127,10 +128,9 @@
         clearInterval (timer);
     };
     oContainer.onmouseout = function (){
-        timer= setInterval(function(){
-            aLi2[1].onclick();
-        },1000);
+        play();
     };
+    play ();
  function changeImg(){
      for(var i= 0;i<aLi1.length;i++ ){
          aLi1[i].className ="";
@@ -140,11 +140,11 @@
      aImg[nowIndex].className ="select";
  }
 
-
-   var timer= setInterval(function(){
+function play(){
+     timer= setInterval(function(){
         aLi2[1].onclick();
     },1000);
-
+}
 
 
 </script>

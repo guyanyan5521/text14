@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>练习</title>
+    <style>
+        button{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<div id="div"></div>
+<button id="button">button</button>
+
+<script>
+var ODiv = document.getElementById ("div");
+var OButton = document.getElementById ("button");
+function getStyle(elem, attr) {
+        //能力检测
+        if(elem.currentStyle){//IE
+            return elem.currentStyle[attr];
+        }else if(window.getComputedStyle){//标准浏览器
+            return getComputedStyle(elem, false)[attr];
+        }else{
+            return elem.style[attr];
+        }
+    }
+//function getStyle(elem,attr){
+//    if(elem.currentStyle){
+//        return elem.currentStyle[attr];
+//    }
+//    else if(window.getComputedStyle){
+//        return getComputedStyle(elem,false)[attr];
+//    }
+//    else{
+//        return elem.style[attr];
+//    }
+//}
+//function css(elem,attr,vaule){
+//    if()
+//    if()
+
+//N
+    console.log(getStyle(ODiv ,"width"));
+   console.log(getStyle(OButton ,"color"));
+
+</script>
+</body>
+</html>
