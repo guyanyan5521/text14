@@ -1,0 +1,4 @@
+盒模型问题：
+盒模型有两种：
+1.标准盒模型：width=content
+2.怪异/混杂盒模型：width=content+padding+margin 出现的条件：不写<!DOCTYPE html>
