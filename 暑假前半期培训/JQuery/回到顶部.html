@@ -22,6 +22,28 @@
 <img src="../../shop/img/tu1.jpg" alt="加载失败" title="鹿晗最帅" id="img"/>
 <script src="jquery-1.11.2.js "></script>
 <script>
+    $(function(){
+        $("img").on("click",function(){
+            var target;
+                    if(document.documentElement.scrollTop ){
+                        target = $("html");
+                    }
+                    else{
+                        target = $("body");
+                    }
+                    var timer = setInterval(function(){
+                        var iScrollTop = target.scrollTop();
+                        if( iScrollTop <=0){
+                            clearInterval (timer);
+                        }
+                        else window.scrollTo (0, iScrollTop -=50);
+                    },500);
+                }
+        );
+
+
+    });
+
 //    var oImg = document.getElementById("img");
 //    oImg.onclick=function(){
 //        var timer = setInterval(function(){

@@ -2,3 +2,12 @@
 盒模型有两种：
 1.标准盒模型：width=content
 2.怪异/混杂盒模型：width=content+padding+margin 出现的条件：不写<!DOCTYPE html>
+改变this的指向：
+call:第一个参数是改变指向后的对象后面的参数是立即调用时有几个参数传几个参数aa.call(obj,name)
+apply:第一个参数是改变指向后的对象后面的参数第二个参数是数组  aa.apply(obj,[])
+bind:只是改变指向，不会立即调用。如果要立即调用在后面加一个括号
+事件委托/事件代理：
+把子元素的事件委托给父元素去绑定提高效率//JQUERY:$("#ul").on("click","li",function(){});原生：oUl.onclick = function(){};
+解决后生成事件绑定问题
+事件源：e.target || window.event.
+

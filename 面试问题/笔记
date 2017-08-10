@@ -1,0 +1,185 @@
+<meta charset = "UTF-8"> 表示字符集
+<meta name ="keyWords" content =""> 表示关键字
+<meta name ="description" content =""> 表示网站描述
+标签p自带上下16像素外边距
+body自带八个像素的外边距
+如果img外面有a标签就会自带蓝色边框（在ie678中）
+标签：
+1、<textarea> 标签定义多行的文本输入控件。可以用鼠标拖动它放大缩小(resize:none;可以消除这个属性)
+2、fieldset 元素可将表单内的相关元素分组。
+
+  <fieldset> 标签将表单内容的一部分打包，生成一组相关表单的字段。
+
+  当一组表单元素放到 <fieldset> 标签内时，浏览器会以特殊方式来显示它们，它们可能有特殊的边界、3D 效果，或者甚至可创建一个子表单来处理这些元素。
+
+  <fieldset> 标签没有必需的或唯一的属性。
+
+  <legend> 标签为 fieldset 元素定义标题。
+3、.defaultValue//输入设置的默认值
+
+
+行级元素：inline :span a
+块级元素：block:div p h1
+替换元素：img input //既可以设置宽高又可以并列在同一行
+css选择器：
+1、id选择器 #id 设权重值为100//如果全是类选择器的权重值大于一个id选择器，依然是id最大
+2、类选择器 .class 设权重值为10
+3、标签/元素选择器：div{} h1{} 设权重值为1
+4、后代选择器 #div h1{}
+5、子代选择器 #div>h1{}
+6、分组选择器 #div,h1{}
+7、伪类选择器 #div:hover{}
+元素塌陷问题：
+1、设置高
+2、溢出隐藏
+3、设置浮动
+4、绝对定位
+行及元素在块级元素中屏居中
+text-line:center;
+line-height:
+块级元素在块级元素中居中
+1、overflow:hidden;
+margin: 75px auto;
+2、绝对定位
+position:absolute;
+ top :50%;
+ left ：50%;
+margin-top = -25px;
+ margin-left =-25px;
+ JAVASCRIPT:
+ var:variable
+ js:number string boolean undefined null object
+ typeof undefined : undefined
+  typeof null:object
+  script写在body里是加载完DOM文件不加载资源文件就开始加在script
+  script写在head里是加载完DOM文件加载资源文件才加在script：window.onload = function(){}
+ 定义一个方法：
+ 函数立即调用：（function(){})（）；
+  function fn1(){}  可以先调用后定义
+  var fn2 = function(){}； 不可以先调用后定义
+  定义对象：
+  1、var obj1 = new Object();
+  obj1.name = "zhangsan";
+  obj1.eat = function(){}
+  2、var obj1 = {
+  name: "zhangsan",
+  eat: function(){
+  }
+  };
+  for循环：
+  for(var p in obj3){
+  console.log(obj3[p]);
+  }
+
+
+DOM:
+获取元素：
+document.getElementById("div");
+document.getElementsByTagName("div");//获取节点列表
+document.getElementsByClassName(".div");//有兼容性问题
+document.getElementsByName("username");//有兼容性问题
+创建一个元素
+定时器：
+setTimeout   //返回值是number型，会跳出当前执行对列
+setInterval  //返回值是number型
+获取宽度：
+offsetWidth(offsetHeight): content+padding+border
+offsetLeft(offsetTop):是相对离他最近已经定位的主先元素的距离，如果都没定位是相对于body定位
+offsetParent:是相对离他最近已经定位的主先元素的对象
+clientX//
+pageX
+如何让一个元素在网页里不显示：
+1、display:none;//事件没有不能绑定事件,不占空间
+2、opacity:0;
+filter:alpha(opacity=0);//占空间有事件
+3、visibility:hidden;//占空间，没事件
+this:
+1、在函数、计数器中this代表window
+2、对象.事件this代表的是对象
+事件冒泡：
+从事件源开始向外冒泡直到父元素（传播）//xx.attachEvent("onclick",function(){});//只支持IE678，他只有事件冒泡没有事件捕获,事件可以重复绑定并且是倒叙显示，this指向的是window
+xx.addEventListener("",function(){},false);事件可以重复绑定并且是正叙显示\\不写true or false 则默认false
+
+
+事件捕获：
+从父元素向事件源捕获，并且是先捕获后冒泡//xx.addEventListener("click",function(){},true);
+阻止事件冒泡:
+1、e.stopPropagetion()
+2、在IE下：window.event.cancelBubble = true
+e在不同浏览器下表现形式：
+e = e || window.event//早期IE的写法
+CSS3：
+1、图片的懒加载：ajax
+2、预加载
+JQUERY的优点:
+1、提供非常强大的选择器
+2、解决浏览器的兼容问题
+3、提供许多DOM操作方法
+4、有非常丰富的动画效果
+5、有许多丰富的插件
+JQUERY笔记：
+注意：原生对象 => jq对象  $(oDiv)
+      jq对象   => 原生对象 $("#div1")[0]  $("#div1").get(0)
+      原生对象和 jq对象不可以相互调用其方法
+1、文档就绪函数//等DOM加载完成：$(document).ready(function(){})/$(function(){}):://好处：不会污染全局变量
+2、$("*").css("background","red")://所有元素的背景全变成红色包括HTML BODY
+2、parent > child//亲子代选择器
+   ancestor descendant//后代选择器
+   prev + next//下一个相邻兄弟选择器
+   prev ~ siblings//跟随其的所有同级元素
+   $("#ul li:eq(0)")选中第一个    $("#ul li:eq(-1)")选中倒数第一个
+   $("#ul li:even") 选择所引值为偶数的元素，从 0 开始计数   $("#ul li:odd") 选择索引值为奇数元素，从 0 开始计数
+   $("#ul li:last") 选择最后一个匹配的元素。                $("#ul li:fist")选择第一个匹配的元素。
+   $("#ul li:lt(0)")   选择匹配集合中所有索引值小于给定index参数的元素      $("#ul li:gt(0)") 选择匹配集合中所有索引值大于给定index参数的元素
+   属性：
+   原生的属性：1、oDiv.index=5;//简单的属性赋值，在DOM结构里看不到
+                  oDiv.setAttribute("aa","123")//可以再DOM结构里看到
+                  oDiv.getAttribute（"aa"）//查看属性的值
+               2、oDiv.className = "aa"//会覆盖原有的类名
+                  oDiv.className+= " aa "//会保留原来的类名
+   JQUERY:1、$("#DIV1").attr("aa","123")//可以再DOM结构看到
+             $("#DIV1").attr("aa")//获取值
+             $("#DIV1").removeAttr("aa")//移除
+             $("#DIV1").prop("aa","123")//再DOM结构里看不到//遇到typle = "checkbox"需要用到checked属性时只能用prop
+             $("#DIV1").prop("aa")//获取值
+             $("#DIV1").removeProp("aa")//移除
+             $("#username").val()//取值：取value的值
+             $("#username").val("lisi")//设置值
+          2、$("#div1").addClass("aa")//不会覆盖原有的类名
+          3、$("#div1").css("aa")
+          4、
+          5、
+          6、$("#div1").width（）//content,没参数是获取，有参数是设置
+             $("#div1").innerWidth（）//content+padding//没参数是获取，有参数是设置
+             $("#div1").outerWidth（）//content+padding+border//没参数是获取，有参数是设置
+             $("#div1").outerWidth（true）//content+padding+border+margin//没参数是获取，有参数是设置
+          7、$("#div1").offset（）//在匹配的元素集合中，获取的第一个元素的当前坐标，或设置每一个元素的坐标，//没参数是获取，有参数是设置
+             $("#div1").position（）//获取匹配元素中第一个元素的当前坐标，相对指离该元素最近的而且被定位过的祖先元素的坐标/没参数是获取，有参数是设置
+          8、$("#div1").offsetParent（）//取得离指定元素最近的含有定位信息的祖先元素//这个方法不接受任何参数。
+   遍历：
+          1、.eq()和:eq（）一样
+          2、.filter(":eq(0)")筛选
+          3、.is("li")判断什么是不是li,不能链式操作
+          4、.closest()//开始于当前元素从DOM结构往上找，找到一个就停止
+             .parents()//开始于父元素从DOM结构往上找到根，找到所有的
+          5、.nextAll()//找到所有
+             .nextUntil()//通过选择器，DOM节点，或jQuery对象得到每个元素之后的所有兄弟元素，但不包括匹配的元素。
+   事件：
+          1、mouseover//支持冒泡
+             mouseunter//不支持冒泡
+          2、mouseout//支持冒泡
+             mouseleave//不支持冒泡
+          3、.hover()// mouseunter+ mouseleave
+
+
+
+
+
+
+注意：
+1、对象.style属性只能获取内联样式的值，他可以设置值
+element.style//是指在js里设置的属性
+2、innerHTML:取标签内的内容
+3、Math.random()//0~1左闭右开
+4、在form表单中button如果什么都不写则默认提交，如果写type ="button"就不会是默认提交了
+

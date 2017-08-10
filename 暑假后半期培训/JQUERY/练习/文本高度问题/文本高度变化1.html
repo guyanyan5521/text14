@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>文本高度变化</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        #container {
+            height: 1000px;
+            width: 100px;
+            margin-left:300px;
+            margin-top: 100px;
+
+        }
+        #button {
+            height: 20px;
+            width: 100px;
+            text-align: center;
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+        #container .select {
+            height: 20px;
+            width: 40px;
+            background: #999999;
+            color: #FFFFFF;
+            border: 1px solid;
+            cursor: pointer;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="button">
+        <div class="select">放大</div>
+        <div class="select">缩小</div>
+    </div>
+    <textarea id="msg" rows="10" cols="50" >多行文本框高度变化.多行文本框高度变化.多行文本框高度变化.多行文本框高度变化.多行文本框高度变化.多行文本框高度变化.多行文本框高度变化.多行文本框高度变化.多行文本框高度变化.</textarea>
+</div>
+<script src="../../jquery-1.11.2.js "></script>
+<script>
+    $(function(){
+        var $msg =  $("#msg");
+        $("#button").on("click","div",function(){
+            if($(this).index() == 0){
+
+                if(  $msg.outerHeight() >= 500){
+                    $msg.outerHeight($msg.outerHeight());
+                }else{
+                    $msg.outerHeight(($msg.outerHeight() + 50));
+                }
+
+            }else{
+                if(  $msg.outerHeight() <= 50){
+                    $msg.outerHeight($msg.outerHeight());
+                }else{
+                    $msg.outerHeight(($msg.outerHeight() - 50));
+                }
+
+            }
+        });
+    });
+
+//    var oButton = document.getElementById ("button");
+//    oButton.onclick = function(){
+//        console.log(this);
+//    };
+</script>
+</body>
+</html>

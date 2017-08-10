@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>照片墙</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body,html{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            position: relative;
+        }
+        #container {
+            width: 100%;
+            height: 100%;
+            background: url(img/bg.jpg);
+        }
+        #container .img{
+            width: 125px;
+            height: 125px;
+            border: 5px solid #fff;
+            box-shadow:2px 2px 2px 2px rgba(0,0,0,0.5);
+            position: absolute;
+            top : -500px;
+            left: -500px;
+            transition: all 1s ease;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    
+</div>
+<script>
+    var  ROW = 4, COL = 6, NUM = ROW * COL;
+    var count = 0;
+    var index = 0;
+    var oImgWidth;
+    var oImgHeight;
+    var fColGap;
+    var fRorGap;
+    var oContainer = document.getElementById ("container");
+//    var aImg = document.createElement
+    for(var i = 0 ; i < NUM ; i++  ) {
+        var oThumbImg = new Image();
+        oThumbImg.onload = function () {
+            count++;
+            if (count == NUM * 2) {
+                loadSuccess();
+            }
+        };
+        oThumbImg.src = "img/thumbs/" + (i + 1) + ".jpg";
+        var oBigImg = new Image();
+        oBigImg.onload = function () {
+            count++;
+            if (count == NUM * 2) {
+                loadSuccess();
+            }
+        };
+        oBigImg.src = "img/"+(i + 1)+".jpg";
+    }
+    function loadSuccess(){
+            for(var i = 0 ; i < ROW ; i++ ){
+                for(var j = 0 ; j < COL ; j++){
+                    index++;
+                    var oDiv = document.createElement ("div");
+                    oDiv.style.backgroundImage = "url(img/thumbs/" + index + ".jpg)";
+                    oDiv.className = "img";
+                    oDiv.innerHTML = "<span></span>";
+                    oDiv.index = index;
+                    oDiv.pos = {
+                        row : i,
+                        col : j
+                    };
+                    oContainer.appendChild (oDiv);
+
+                }
+            }
+        var aImg = oContainer.getElementsByClassName ("img");
+        oImgWidth = aImg[0].offsetWidth ;
+        oImgHeight = aImg[0].offsetHeight ;
+        fRorGap = (oContainer.offsetHeight -  oImgHeight * ROW  )/( ROW +1);
+        fColGap = (oContainer.offsetWidth -  oImgWidth * COL )/(COL+1);
+        for(var i = 23 ; i >= 0 ; i--){
+            aImg[i].style.transitionDelay = (NUM - i)*100+"ms";
+            aImg[i].style.top = (fRorGap + oImgHeight )*aImg[i].pos.row+fRorGap +"px";
+            aImg[i].style.left = (fColGap  + oImgWidth )*aImg[i].pos.col+fColGap +"px";
+            aImg[i].style.transform = "rotate("+ (Math.random()*40-20 )  +"deg)";
+
+
+
+
+        }
+
+          }
+
+
+
+
+
+</script>
+</body>
+</html>

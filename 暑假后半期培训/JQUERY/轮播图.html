@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style:none;
+        }
+        img{
+            border:0;
+        }
+        #imgs img {
+            width: 400px;
+            height: 400px;
+            display:none;
+        }
+        #imgs .select {
+            display: block;
+        }
+        #container   li{
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            background: #000;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        #number li {
+            float: left;
+            margin-right: 5px;
+
+        }
+        #number {
+            position: absolute;
+            bottom: 15px;
+            right: 5px;
+        }
+        #container {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            margin: 100px auto;
+        }
+        #mark li{
+            float: left;
+            margin-right: 5px;
+        }
+        #mark {
+            position: absolute;
+            bottom: 15px;
+            left: 5px;
+        }
+        #number .select{
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="imgs">
+        <img src="../../shop/img/tu1.jpg" alt="图片加载失败" title="鹿晗最帅" class="select"/>
+        <img src="../../shop/img/tu2.jpeg" alt="图片加载失败" title="鹿晗最帅"/>
+        <img src="../../shop/img/tu3.jpg" alt="图片加载失败" title="鹿晗最帅"/>
+        <img src="../../shop/img/tu4.jpg" alt="图片加载失败" title="鹿晗最帅"/>
+    </div>
+
+    <ul id="number">
+        <li class="select ">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <ul id="mark">
+        <li>&lt;</li>
+        <li>&gt;</li>
+    </ul>
+</div>
+<script src="jquery-1.11.2.js " ></script>
+<script>
+   $(function(){
+       var $li = $("#number li");
+       var number = 0;
+       var timer;
+    $li.on("mouseenter",function(){
+        number = $(this).index();
+       changeImg ();
+    });
+       $("#mark li").on("click",function(){
+           if($(this).index() == 0 ){
+               number--;
+               if(number == -1){
+                   number = $li.length - 1;
+               }
+           }else{
+               number++;
+               if(number ==  $li.length){
+                   number = 0;
+               }
+           }
+          changeImg ();
+       });
+       play();
+       $("#container").hover(function(){
+           clearInterval (timer);
+       },function(){
+           play();
+       });
+
+       function changeImg(){
+           $li.eq(number).addClass ("select").siblings().removeClass("select");
+           $("img").eq(number).addClass ("select").siblings().removeClass("select");
+       }
+       function play(){
+           timer = setInterval (function(){
+               $("#mark li:eq(1)").trigger("click");
+           },1000);
+       }
+
+   });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        ul { margin:10px; list-style:inside circle; font-weight:bold; }
+        li { cursor:pointer; }
+    </style>
+    <script src="jquery-1.11.2.js "></script>
+</head>
+<body>
+<ul>
+    <li>Go to the store</li>
+    <li>Pick up dinner</li>
+    <li>Debug crash</li>
+
+    <li>Take a jog</li>
+</ul>
+<script>
+    $("li").toggle(
+            function () {
+                $(this).css({"list-style-type":"disc", "color":"blue"});
+            },
+            function () {
+                $(this).css({"list-style-type":"disc", "color":"red"});
+            },
+            function () {
+                $(this).css({"list-style-type":"", "color":""});
+            }
+    );
+
+</script>
+
+</body>
+</html>

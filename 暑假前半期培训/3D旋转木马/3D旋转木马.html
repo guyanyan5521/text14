@@ -2,9 +2,53 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>旋转木马</title>
+    <style>
+        body{
+            perspective: 100px;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        #container {
+            width: 125px;
+            height: 125px;
+            position: relative;
+            margin: 200px auto;
+        }
+        #container img{
+            width: 125px;
+            height: 125px;
+            position: absolute;
+        }
+    </style>
 </head>
 <body>
+<div id="container"></div>
+<script>
+var oContainer = document.getElementById ("container");
+var counter = 0;
+    for(var i = 0; i < 9 ; i++){
+//        图片的预加载,先写onload在写src
+        var oImg = new Image();
+        oImg.onload = function(){
+            counter++;
+            if(counter == 9){
+                loadSuccess ();
+            }
+        };
+        oImg.src ="images/"+ (i+ 1 )+".jpg";
+        oImg.style
+
+        oContainer.appendChild (oImg );
+    }
+        
+    function loadSuccess(){
+        
+    }
+</script>
 
 </body>
 </html>

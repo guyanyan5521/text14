@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<able><input type="text" id="select"/></able>
+<ul>
+    <li>苏傻子</li>
+    <li>苏猪猪</li>
+    <li>苏懒懒</li>
+</ul>
+<script src="jquery-1.11.2.js "></script>
+<script>
+    $(function(){
+        $("#select").on("keyup",function(){
+
+            $("ul li").css("background","transparent");
+            if($(this).val() !=""){
+
+                $("ul li:contains("+$("#select").val() +") ").css("background","red");
+            }
+
+        });
+    });
+</script>
+</body>
+
+</html>
