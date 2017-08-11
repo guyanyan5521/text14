@@ -54,12 +54,12 @@
             if($(this).index() == 0){
 
                     $msg.animate({
-                        scrollTop:""+($msg.scrollTop()-200)+""
+                        scrollTop:$msg.scrollTop()-200
                     },400);
                 }
             else {
                 $msg.animate({
-                    scrollTop:""+($msg.scrollTop()+200)+""
+                    scrollTop:$msg.scrollTop()+200
                 }, 400);
             }
 

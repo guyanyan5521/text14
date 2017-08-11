@@ -70,6 +70,10 @@ margin-top = -25px;
   for(var p in obj3){
   console.log(obj3[p]);
   }
+  String:
+  1、indexOf():检索字符串
+  2、charAt(0):获取字符串
+  3、substring(start,stop):截取字符串
 
 
 DOM:
@@ -182,4 +186,10 @@ element.style//是指在js里设置的属性
 2、innerHTML:取标签内的内容
 3、Math.random()//0~1左闭右开
 4、在form表单中button如果什么都不写则默认提交，如果写type ="button"就不会是默认提交了
+5、类：具有相同属性和对象的集合
+   对象：具体的对象
+   this:当前对象的引用,当前实地化对象
+   属性是定义在构造函数里
+   方法是定义在原型（prototype）里,效率高，类名.prototype.方法名 = function(){};
+   原型链：当一个对象执行一个方法时，先在构造函数里找如果有就不再找，找不到在上原型里找，原型里找不到就去object找。就是一级一级往上找
 
