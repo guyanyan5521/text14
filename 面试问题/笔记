@@ -1,6 +1,19 @@
 <meta charset = "UTF-8"> 表示字符集
 <meta name ="keyWords" content =""> 表示关键字
 <meta name ="description" content =""> 表示网站描述
+图片：
+.png:可以透明
+Z-INDEX:
+z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。
+
+注释：元素可拥有负的 z-index 属性值。
+
+注释：Z-index 仅能在定位元素上奏效（例如 position:absolute;）！
+
+说明
+该属性设置一个定位元素沿 z 轴的位置，z 轴定义为垂直延伸到显示区的轴。如果为正数，则离用户更近，为负数则表示离用户更远。
+
+
 标签p自带上下16像素外边距
 body自带八个像素的外边距
 如果img外面有a标签就会自带蓝色边框（在ie678中）
@@ -17,7 +30,7 @@ body自带八个像素的外边距
   <legend> 标签为 fieldset 元素定义标题。
 3、.defaultValue//输入设置的默认值
 
-
+CSS2：
 行级元素：inline :span a
 块级元素：block:div p h1
 替换元素：img input //既可以设置宽高又可以并列在同一行
@@ -28,12 +41,23 @@ css选择器：
 4、后代选择器 #div h1{}
 5、子代选择器 #div>h1{}
 6、分组选择器 #div,h1{}
-7、伪类选择器 #div:hover{}
-元素塌陷问题：
+7、伪类选择器 #div:hover{}//在IE6下只能给a加//鼠标移动到连接上
+                ：link//未访问的链接
+                ：visited//已访问的链接
+                :active//按住的链接
+
+元素塌陷问题（子元素脱离文档流父元素无高度）：
 1、设置高
 2、溢出隐藏
 3、设置浮动
 4、绝对定位
+5、css3:
+.clearfix::after{
+content:'';
+display:block;
+clear:both;
+
+}
 行及元素在块级元素中屏居中
 text-line:center;
 line-height:
@@ -46,9 +70,10 @@ position:absolute;
  left ：50%;
 margin-top = -25px;
  margin-left =-25px;
+ 3、transform:translate(-50%,-50%)
  JAVASCRIPT:
  var:variable
- js:number string boolean undefined null object
+ js:number string boolean undefined null object function
  typeof undefined : undefined
   typeof null:object
   script写在body里是加载完DOM文件不加载资源文件就开始加在script
@@ -67,7 +92,7 @@ margin-top = -25px;
   }
   };
   for循环：
-  for(var p in obj3){
+  for(var p in obj3){        //for in 就是循环数组和对象
   console.log(obj3[p]);
   }
   String:
@@ -77,6 +102,20 @@ margin-top = -25px;
 
 
 DOM:
+DOM Element :
+nodeType 属性返回以数字值返回指定节点的节点类型。
+
+如果节点是元素节点，则 nodeType 属性将返回 1。
+
+如果节点是属性节点，则 nodeType 属性将返回 2。
+定义和用法
+nextSibling 属性返回指定节点之后紧跟的节点，在相同的树层级中。
+
+被返回的节点以 Node 对象返回。
+
+注释：如果没有 nextSibling 节点，则返回值为 null。
+
+
 获取元素：
 document.getElementById("div");
 document.getElementsByTagName("div");//获取节点列表
@@ -92,6 +131,7 @@ offsetLeft(offsetTop):是相对离他最近已经定位的主先元素的距离，如果都没定位是相对
 offsetParent:是相对离他最近已经定位的主先元素的对象
 clientX//
 pageX
+
 如何让一个元素在网页里不显示：
 1、display:none;//事件没有不能绑定事件,不占空间
 2、opacity:0;
@@ -174,6 +214,72 @@ JQUERY笔记：
           2、mouseout//支持冒泡
              mouseleave//不支持冒泡
           3、.hover()// mouseunter+ mouseleave
+   CSS3:
+   1、text-shadow
+   none： 无阴影
+   <length>①： 第1个长度值用来设置对象的阴影水平偏移值。可以为负值
+   <length>②： 第2个长度值用来设置对象的阴影垂直偏移值。可以为负值
+   <length>③： 如果提供了第3个长度值则用来设置对象的阴影模糊值。不允许负值
+   <color>： 设置对象的阴影的颜色。 s
+   2、white-space:nowrap;//不换行
+       overflow:hidden;//
+       text-overflow:ellipsis;//后面省攻略的变成..
+   		clip;//裁剪和hidden差不多
+       word-break: break-all;//强行换行
+   3、background-color//充满border
+     背景图片充满padding
+     repeat//充满border
+     background-origin:content-box;//决定背景图片从哪开始
+     		 padding-box;默认值
+     		 margin-box;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 0     padding-box：从padding区域（不含padding）开始向外裁剪背景。
+     border-box：从border区域（不含border）开始向外裁剪背景。默认值
+     content-box：从content区域开始向外裁剪背景。
+     text：从前景内容的形状（比如文字）作为裁剪区域向外裁剪，如此即可实现使用背景作为填充色之类的遮罩效果。遮罩效果 See with Webkit
+
+
+     background-size:px px;
+     取值：
+     <length>：用长度值指定背景图像大小。不允许负值。//会失真
+     <percentage>：用百分比指定背景图像大小。不允许负值。//相对于设置div之类的宽高比例
+     auto：背景图像的真实大小。
+     cover：将背景图像等比缩放到完全覆盖容器，背景图像有可能超出容器。
+     contain：将背景图像等比缩放到宽度或高度与容器的宽度或高度相等，背景图像始终被包含在容器内。
+
+
+     渐变颜色（用不上）
+弹性盒模型{
+子元素分配父元素的剩余空间
+}
+
+变形：transform
+位移：translate(50px,50px)
+放大缩小的比例：scale(1.5,1.5)   (-1.5)先放大再翻转
+拉伸：skew(45deg);
+矩阵：matrix
+transform:rotate(45deg);旋转
+transform-origin:
+ cnblogs starof
+ 过渡：
+ transition:width 2s;
+ transition:all 2s ease//  2s//延迟;
+  <' transition-property '>： 检索或设置对象中的参与过渡的属性
+  <' transition-duration '>： 检索或设置对象过渡的持续时间
+  <' transition-timing-function '>： 检索或设置对象中过渡的动画类型
+  {
+  linear： 线性过渡。等同于贝塞尔曲线(0.0, 0.0, 1.0, 1.0)
+   ease： 平滑过渡。等同于贝塞尔曲线(0.25, 0.1, 0.25, 1.0)
+   ease-in： 由慢到快。等同于贝塞尔曲线(0.42, 0, 1.0, 1.0)
+   ease-out： 由快到慢。等同于贝塞尔曲线(0, 0, 0.58, 1.0)
+   ease-in-out： 由慢到快再到慢。等同于贝塞尔曲线(0.42, 0, 0.58, 1.0)
+   step-start： 等同于 steps(1, start)
+   step-end： 等同于 steps(1, end)
+   steps(<integer>[, [ start | end ] ]?)： 接受两个参数的步进函数。第一个参数必须为正整数，指定函数的步数。第二个参数取值可以是start或end，指定每一步的值发生变化的时间点。第二个参数是可选的，默认值为end。
+   cubic-bezier(<number>, <number>, <number>, <number>)： 特定的贝塞尔曲线类型，4个数值需在[0, 1]区间内
+  }
+  <' transition-delay '>： 检索或设置对象延迟过渡的时间
+动画：
+
 
 
 
@@ -192,4 +298,12 @@ element.style//是指在js里设置的属性
    属性是定义在构造函数里
    方法是定义在原型（prototype）里,效率高，类名.prototype.方法名 = function(){};
    原型链：当一个对象执行一个方法时，先在构造函数里找如果有就不再找，找不到在上原型里找，原型里找不到就去object找。就是一级一级往上找
+   6、cooliek不安全，只能存4K,有的只能存20条,随着每次请求从客户端发送到服务端
+   7、.trim()消除字符串前后的空格
+   8、.split("")//将字符串分割成数组
+   9、动画前面加一个.stop()
+   10、图片有时自己会大一点，用浮动和display:block就会解决
+   11、在IE 6中不能给完全透明的元素绑定的事件如要绑定必须有颜色
+   12、背景颜色的包括padding+border
+   张鑫旭
 

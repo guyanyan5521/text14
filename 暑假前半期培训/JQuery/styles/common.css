@@ -1,0 +1,21 @@
+/*ÖØÖÃ*/
+*{
+    margin: 0;
+    padding: 0;
+
+}
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+
+}
+img{
+    border: 0;
+}
+li{
+    list-style: none;
+}
+.wrapper{
+    width: 990px;
+    margin: 0 auto;
+}

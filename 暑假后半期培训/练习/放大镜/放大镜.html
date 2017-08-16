@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>放大镜</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #big ,#small {
+            float: left;
+        }
+        #big {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            display: none;
+        }
+        #small{
+            width: 400px;
+            height: 400px;
+            position: relative;
+        }
+        #magnifying {
+            width: 200px;
+            height: 200px;
+            background: #999999;
+            position: absolute;
+            top:0;
+            left:0;
+            opacity: .6;
+            filter: alpha(opacity:60);
+            display: none;
+
+        }
+        #wrapper {
+            width: 400px;
+            height: 400px;
+            background: #000;
+            position: absolute;
+            top:0;
+            left:0;
+            opacity: 0;
+            filter: alpha(opacity:0);
+
+        }
+
+    </style>
+</head>
+<body>
+<div id="small">
+    <img src="images/1.jpg" alt="图片加载失败"/>
+    <div id="magnifying"></div>
+    <div id="wrapper"></div>
+</div>
+<div id="big">
+    <img src="images/2.jpg" alt="图片加载失败"/>
+</div>
+<script src="../../JQUERY/jquery-1.11.2.js "></script>
+<script>
+$(function(){
+$("#wrapper").hover(function(){
+
+    $("#magnifying").stop().show("fast");
+    $("#big").stop().show("fast");
+
+},function(){
+    $("#magnifying").stop().hide("fast");
+    $("#big").stop().hide("fast");
+
+}).on("mousemove",function(e){
+    e = e|| window.event;
+    var top = e.clientY -  $("#magnifying").innerHeight()/2;
+    var left = e.clientX -  $("#magnifying").innerWidth ()/2;
+    $("#magnifying").
+});
+});
+</script>
+</body>
+</html>
