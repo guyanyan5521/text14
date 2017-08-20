@@ -18,11 +18,12 @@
         #container {
             width: 100%;
             height: 100%;
-            background: url(img/bg.jpg);
+            background: url("img/bg.jpg");
+            position: relative;
         }
         #container .img{
-            width: 125px;
-            height: 125px;
+            width: 100px;
+            height: 100px;
             border: 5px solid #fff;
             box-shadow:2px 2px 2px 2px rgba(0,0,0,0.5);
             position: absolute;
@@ -30,23 +31,68 @@
             left: -500px;
             transition: all 1s ease;
             cursor: pointer;
-
+        }
+        #container .img span{
+            display: block;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: all 1s ease;
+            /*z-index:1;*/
+        }
+        #left,#right {
+            width: 60px;
+            height: 60px;
+            -webkit-border-radius:0 5px 5px 0 ;
+            -moz-border-radius: 0 5px 5px 0 ;
+            border-radius:0 5px 5px 0;
+            position: absolute;
+            display: none;
+        }
+        #left {
+            top:50%;
+            left:0;
+            -webkit-transform: translate(0 ,-50%);
+            -moz-transform: translate(0,-50%);
+            -ms-transform: translate(0 ,-50%);
+            -o-transform: translate(0 ,-50%);
+            transform: translate(0 ,-50%);
+            background: #FFFFFF url("img/prev.png") no-repeat center center;
+        }
+        #right{
+            top:50%;
+            left:100%;
+            -webkit-transform: translate(-100%,-50%);
+            -moz-transform: translate(-100%,-50%);
+            -ms-transform: translate(-100%,-50%);
+            -o-transform: translate(-100%,-50%);
+            transform: translate(-100%,-50%);
+            background: #FFFFFF url("img/next.png") no-repeat center center;
         }
     </style>
 </head>
 <body>
-<div id="container">
-    
-</div>
+<div id="container"></div>
+<div id="left"></div>
+<div id="right"></div>
 <script>
-    var  ROW = 4, COL = 6, NUM = ROW * COL;
+    var  ROW = 4, COL = 6, NUM = ROW * COL,BIW=750,BIH=500,SIW=125,SIH=125;
     var count = 0;
     var index = 0;
     var oImgWidth;
     var oImgHeight;
     var fColGap;
     var fRorGap;
+    var fBigRorGap;
+    var fBigColGap;
+    var imgUrl=0;
+    var arr = [];
+    var flag = true;
     var oContainer = document.getElementById ("container");
+    var aImg = oContainer.getElementsByClassName("img");
+    var aSpan = oContainer.getElementsByTagName ("span");
+    var oRight = document.getElementById ("right");
+    var oLeft = document.getElementById ("left");
 //    var aImg = document.createElement
     for(var i = 0 ; i < NUM ; i++  ) {
         var oThumbImg = new Image();
@@ -66,40 +112,100 @@
         };
         oBigImg.src = "img/"+(i + 1)+".jpg";
     }
-    function loadSuccess(){
-            for(var i = 0 ; i < ROW ; i++ ){
-                for(var j = 0 ; j < COL ; j++){
-                    index++;
-                    var oDiv = document.createElement ("div");
-                    oDiv.style.backgroundImage = "url(img/thumbs/" + index + ".jpg)";
-                    oDiv.className = "img";
-                    oDiv.innerHTML = "<span></span>";
-                    oDiv.index = index;
-                    oDiv.pos = {
-                        row : i,
-                        col : j
-                    };
-                    oContainer.appendChild (oDiv);
+    function loadSuccess() {
+        for (var i = 0; i < ROW; i++) {
+            for (var j = 0; j < COL; j++) {
+                index++;
+                var oDiv = document.createElement("div");
+                oDiv.style.backgroundImage = "url(img/thumbs/" + index + ".jpg)";
+                oDiv.className = "img";
+                oDiv.innerHTML = "<span></span>";
+                oDiv.index = index;
+                oDiv.pos = {
+                    row: i,
+                    col: j
+                };
+                oContainer.appendChild(oDiv);
 
+            }
+        }
+        oImgWidth = aImg[0].offsetWidth;
+        oImgHeight = aImg[0].offsetHeight;
+        fRorGap = (oContainer.offsetHeight - oImgHeight * ROW  ) / ( ROW + 1);
+        fColGap = (oContainer.offsetWidth - oImgWidth * COL ) / (COL + 1);
+        for (var i = 0; i < NUM; i++) {
+            aImg[i].style.transitionDelay = (NUM - i) * 100 + "ms";
+            aImg[i].style.top = (fRorGap + oImgHeight ) * aImg[i].pos.row + fRorGap + "px";
+            aImg[i].style.left = (fColGap + oImgWidth ) * aImg[i].pos.col + fColGap + "px";
+            aImg[i].style.transform = "rotate(" + (Math.random() * 40 - 20 ) + "deg)";
+        }
+    }
+        fBigRorGap =(oContainer.offsetHeight - BIH)/ 2;
+        fBigColGap =(oContainer.offsetWidth- BIW)/ 2;
+        oContainer.onclick = function(e){
+            if (e.target != this && flag ) {
+                flag = false;
+                if (e.target.className == "img") {
+                    imgUrl = e.target.index;
+                } else {
+                    imgUrl = e.target.parentNode.index;
+                }
+                for (var i = 0; i < NUM; i++) {
+                    aImg[i].style.transitionDelay = "0ms";
+                    aImg[i].style.borderWidth = "1px";
+                    aImg[i].style.top = fBigRorGap + SIH * aImg[i].pos.row + "px";
+                    aImg[i].style.left = fBigColGap + SIW * aImg[i].pos.col + "px";
+                    aImg[i].style.width = "125px";
+                    aImg[i].style.height = "125px";
+                    aImg[i].style.transform = "rotate(0deg)";
+                    aSpan[i].style.opacity = "1";
+                    aSpan[i].style.backgroundImage = "url(img/" + imgUrl + ".jpg)";
+                    aSpan[i].style.backgroundPosition = -SIW * aImg[i].pos.col + "px " +  (-SIH * aImg[i].pos.row) + "px";
+                }
+                oLeft.style.display = oRight.style.display = "block";
+
+            }else{
+                flag = true;
+                for(var i = 0 ; i < NUM  ; i++) {
+                    aImg[i].style.borderWidth = "5px";
+                    aSpan[i].style.opacity = "0";
+                    aImg[i].style.width = "100px";
+                    aImg[i].style.height = "100px";
+                    aImg[i].style.top = (fRorGap + oImgHeight ) * aImg[i].pos.row + fRorGap + "px";
+                    aImg[i].style.left = (fColGap + oImgWidth ) * aImg[i].pos.col + fColGap + "px";
+                    aImg[i].style.transform = "rotate("+ (Math.random()*40-20 )  +"deg)";
+                }
+
+            }
+
+        };
+        oLeft.onclick = oRight.onclick = function(){
+            if(this == oLeft ){
+                imgUrl--;
+                if(imgUrl == 0){
+                    imgUrl = aImg.length ;
+                }
+            }else{
+                imgUrl++;
+                if(imgUrl == aImg.length+1){
+                    imgUrl = 1;
                 }
             }
-        var aImg = oContainer.getElementsByClassName ("img");
-        oImgWidth = aImg[0].offsetWidth ;
-        oImgHeight = aImg[0].offsetHeight ;
-        fRorGap = (oContainer.offsetHeight -  oImgHeight * ROW  )/( ROW +1);
-        fColGap = (oContainer.offsetWidth -  oImgWidth * COL )/(COL+1);
-        for(var i = 23 ; i >= 0 ; i--){
-            aImg[i].style.transitionDelay = (NUM - i)*100+"ms";
-            aImg[i].style.top = (fRorGap + oImgHeight )*aImg[i].pos.row+fRorGap +"px";
-            aImg[i].style.left = (fColGap  + oImgWidth )*aImg[i].pos.col+fColGap +"px";
-            aImg[i].style.transform = "rotate("+ (Math.random()*40-20 )  +"deg)";
+            for (var i = 0; i < NUM; i++) {
+                arr.push(i);
+            }
+            arr.sort(function(a,b){
+                return Math.random()-0.5;
+            });
+            for(var i=0 ; i< arr.length; i++){
+                aSpan[arr[i]].style.backgroundImage = "url(img/" + imgUrl + ".jpg)";
+                aSpan[arr[i]].style.transitionDelay =  50*(i+1)+"ms";
+
+            }
+        };
 
 
 
-
-        }
-
-          }
 
 
 

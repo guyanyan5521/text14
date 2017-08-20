@@ -12,11 +12,18 @@
         #big ,#small {
             float: left;
         }
+        #img2 {
+            position: absolute;
+            top:0;
+            left:0;
+        }
         #big {
             width: 400px;
             height: 400px;
             overflow: hidden;
             display: none;
+            position: relative;
+            
         }
         #small{
             width: 400px;
@@ -56,25 +63,49 @@
     <div id="wrapper"></div>
 </div>
 <div id="big">
-    <img src="images/2.jpg" alt="图片加载失败"/>
+    <img src="images/2.jpg" alt="图片加载失败" id="img2"/>
 </div>
 <script src="../../JQUERY/jquery-1.11.2.js "></script>
 <script>
 $(function(){
-$("#wrapper").hover(function(){
+    var $warpper = $("#wrapper");
+    var $big = $("#big");
+    var $magnifying =  $("#magnifying");
+    $warpper.hover(function(){
 
-    $("#magnifying").stop().show("fast");
-    $("#big").stop().show("fast");
+        $magnifying .stop().show("fast");
+        $big.stop().show("fast");
 
 },function(){
-    $("#magnifying").stop().hide("fast");
-    $("#big").stop().hide("fast");
+        $magnifying .stop().hide("fast");
+        $big.stop().hide("fast");
 
 }).on("mousemove",function(e){
     e = e|| window.event;
-    var top = e.clientY -  $("#magnifying").innerHeight()/2;
-    var left = e.clientX -  $("#magnifying").innerWidth ()/2;
-    $("#magnifying").
+    var top = e.clientY -   $magnifying .innerHeight()/2;
+    var left = e.clientX -  $magnifying .innerWidth ()/2;
+    var xMax = $warpper.innerWidth() - $magnifying.innerWidth();
+    var yMax = $warpper.innerHeight()  - $magnifying.innerHeight();
+    if(top<0){
+        top=0;
+    }
+    if(top > yMax ){
+        top = yMax ;
+    }
+    if(left < 0){
+        left = 0;
+    }
+    if(left > xMax ){
+        left = xMax ;
+    }
+        $magnifying.css({
+        top:top,
+        left:left
+    });
+        $("#img2").css({
+            top:(-(top/yMax) * ($("#img2").innerHeight() - $big.innerHeight ())),
+            left:(-(left/xMax) *( $("#img2").innerWidth() - $big.innerWidth()))
+        });
 });
 });
 </script>

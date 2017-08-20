@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #contianer {
+            margin: 120px auto;
+            width: 450px;
+            position: relative;
+            /*top:100px;*/
+            /*left:200px;*/
+
+        }
+        #contianer img{
+            position: absolute;
+            top:0;
+            left:0;
+            border:10px solid #999999 ;
+            -webkit-box-shadow:  5px 5px 5px rgba(50, 50, 50, .4);
+            -moz-box-shadow:  5px 5px 5px rgba(50, 50, 50, .4);
+            -ms-box-shadow:  5px 5px 5px rgba(50, 50, 50, .4);
+            -o-box-shadow:  5px 5px 5px rgba(50, 50, 50, .4);
+            box-shadow:  5px 5px 5px rgba(50, 50, 50, .4);
+            width: 400px;
+            transition: all 1s;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -o-transition: all 1s;
+        }
+        #img1 {
+            transform:rotate(40deg);
+            -webkit-transform:rotate(40deg);
+            -ms-transform:rotate(40deg);
+            -moz-transform:rotate(40deg);
+            -o-transform:rotate(40deg);
+        }
+        #img2 {
+            transform:rotate(40deg);
+            -webkit-transform:rotate(40deg);
+            -ms-transform:rotate(40deg);
+            -moz-transform:rotate(40deg);
+            -o-transform:rotate(40deg);
+        }
+        /*#img3 {*/
+            /*transform:rotate(40deg);*/
+        /*}*/
+        /*#img4 {*/
+            /*transform:rotate(-40deg);*/
+        /*}*/
+        /*#img5 {*/
+            /*transform:rotate(40deg);*/
+        /*}*/
+        /*#img6 {*/
+            /*transform:rotate(-40deg);*/
+        /*}*/
+        #contianer img:hover{
+           -webkit-box-shadow:  5px 5px 5px 5px rgba(50, 50, 50, .4);
+            -ms-box-shadow:  5px 5px 5px 5px rgba(50, 50, 50, .4);
+            -moz-box-shadow:  5px 5px 5px 5px rgba(50, 50, 50, .4);
+            -o-box-shadow:  5px 5px 5px 5px rgba(50, 50, 50, .4);
+            box-shadow:  5px 5px 5px 5px rgba(50, 50, 50, .4);
+            -webkit-transform:scale(1.5);
+            -ms-transform:scale(1.5);
+            -moz-transform:scale(1.5);
+            -o-transform:scale(1.5);
+            transform:scale(1.5);
+            z-index:1;
+        }
+    </style>
+</head>
+<body>
+<div id="contianer">
+    <img src="imgs/img01.jpg" alt="图片加载失败" id="img1"/>
+    <img src="imgs/img02.jpg" alt="图片加载失败" id="img2"/>
+    <!--<img src="imgs/tu1.jpg" alt="图片加载失败" id="img3"/>-->
+    <!--<img src="imgs/tu2.jpeg" alt="图片加载失败" id="img4"/>-->
+    <!--<img src="imgs/tu3.jpg" alt="图片加载失败" id="img5"/>-->
+    <!--<img src="imgs/tu4.jpg" alt="图片加载失败" id="img6"/>-->
+</div>
+</body>
+</html>

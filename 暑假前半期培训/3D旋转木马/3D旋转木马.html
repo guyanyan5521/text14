@@ -5,7 +5,8 @@
     <title>旋转木马</title>
     <style>
         body{
-            perspective: 100px;
+            perspective: 1000px;
+            perspective-origin: 50% -100%;
         }
         *{
             padding: 0;
@@ -17,11 +18,16 @@
             height: 125px;
             position: relative;
             margin: 200px auto;
+            transition: all 1s ;
+            transform-style: preserve-3d;
+
         }
         #container img{
             width: 125px;
             height: 125px;
             position: absolute;
+            transition: all 1s ;
+
         }
     </style>
 </head>
@@ -29,6 +35,7 @@
 <div id="container"></div>
 <script>
 var oContainer = document.getElementById ("container");
+var aImg = oContainer.getElementsByTagName ("img");
 var counter = 0;
     for(var i = 0; i < 9 ; i++){
 //        图片的预加载,先写onload在写src
@@ -40,13 +47,21 @@ var counter = 0;
             }
         };
         oImg.src ="images/"+ (i+ 1 )+".jpg";
-        oImg.style.transform = "";
 
         oContainer.appendChild (oImg );
     }
-        
+            var num = 0;
+        oContainer.onclick = function(){
+            num++;
+            oContainer.style.transform = "rotateY("+ (num*40)+"deg)";
+        };
     function loadSuccess(){
-        
+        for(var i = 0; i< aImg.length ;i++) {
+            aImg[i].style.transitionDelay = (i*100)+"ms";
+            aImg[i].style.transform = "rotateY(" + (i + 1) * 40 + "deg) translateZ(180px)";
+
+        }
+
     }
 </script>
 
