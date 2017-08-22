@@ -85,9 +85,9 @@
     var fRorGap;
     var fBigRorGap;
     var fBigColGap;
-    var imgUrl=0;
-    var arr = [];
+    var imgUrl=1;
     var flag = true;
+    var nowIndex = 1;
     var oContainer = document.getElementById ("container");
     var aImg = oContainer.getElementsByClassName("img");
     var aSpan = oContainer.getElementsByTagName ("span");
@@ -151,23 +151,27 @@
                     imgUrl = e.target.parentNode.index;
                 }
                 for (var i = 0; i < NUM; i++) {
+                    aSpan[i].style.opacity = "1";
                     aImg[i].style.transitionDelay = "0ms";
                     aImg[i].style.borderWidth = "1px";
+                    aSpan[i].style.transitionDelay =  "0ms";
                     aImg[i].style.top = fBigRorGap + SIH * aImg[i].pos.row + "px";
                     aImg[i].style.left = fBigColGap + SIW * aImg[i].pos.col + "px";
                     aImg[i].style.width = "125px";
-                    aImg[i].style.height = "125px";
+                    aImg[i].style.height = "125px";0
                     aImg[i].style.transform = "rotate(0deg)";
-                    aSpan[i].style.opacity = "1";
                     aSpan[i].style.backgroundImage = "url(img/" + imgUrl + ".jpg)";
                     aSpan[i].style.backgroundPosition = -SIW * aImg[i].pos.col + "px " +  (-SIH * aImg[i].pos.row) + "px";
                 }
                 oLeft.style.display = oRight.style.display = "block";
+                nowIndex = imgUrl;
 
             }else{
                 flag = true;
                 for(var i = 0 ; i < NUM  ; i++) {
+
                     aImg[i].style.borderWidth = "5px";
+                    aSpan[i].style.transitionDelay =  "0ms";
                     aSpan[i].style.opacity = "0";
                     aImg[i].style.width = "100px";
                     aImg[i].style.height = "100px";
@@ -181,25 +185,27 @@
         };
         oLeft.onclick = oRight.onclick = function(){
             if(this == oLeft ){
-                imgUrl--;
-                if(imgUrl == 0){
-                    imgUrl = aImg.length ;
+               nowIndex--;
+                if( nowIndex == 0){
+                    nowIndex= aImg.length ;
                 }
             }else{
-                imgUrl++;
-                if(imgUrl == aImg.length+1){
-                    imgUrl = 1;
+                nowIndex++;
+                if( nowIndex == aImg.length+1){
+                    nowIndex = 1;
                 }
             }
-            for (var i = 0; i < NUM; i++) {
+            var arr = [];//0~23
+            for(var i=0; i<NUM; i++){
                 arr.push(i);
             }
-            arr.sort(function(a,b){
-                return Math.random()-0.5;
+            arr.sort(function(a, b){
+                return Math.random() - 0.5;
             });
             for(var i=0 ; i< arr.length; i++){
-                aSpan[arr[i]].style.backgroundImage = "url(img/" + imgUrl + ".jpg)";
                 aSpan[arr[i]].style.transitionDelay =  50*(i+1)+"ms";
+                aSpan[arr[i]].style.backgroundImage = "url(img/" + nowIndex + ".jpg)";
+
 
             }
         };

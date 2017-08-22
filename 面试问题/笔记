@@ -100,6 +100,7 @@ margin-top = -25px;
   2、charAt(0):获取字符串
   3、substring(start,stop):截取字符串
 
+bom:
 
 DOM:
 DOM Element :
@@ -114,6 +115,11 @@ nextSibling 属性返回指定节点之后紧跟的节点，在相同的树层级中。
 被返回的节点以 Node 对象返回。
 
 注释：如果没有 nextSibling 节点，则返回值为 null。
+2、sort(function(a,b){
+     return a-b;//从小到大
+     return b-a;//从大到小
+     return Math.random()-0.5;//随机排序  乱序
+})//数组排序  如果不赋值则按字母顺序排序
 
 
 获取元素：
@@ -161,6 +167,7 @@ JQUERY的优点:
 3、提供许多DOM操作方法
 4、有非常丰富的动画效果
 5、有许多丰富的插件
+
 JQUERY笔记：
 注意：原生对象 => jq对象  $(oDiv)
       jq对象   => 原生对象 $("#div1")[0]  $("#div1").get(0)
@@ -195,10 +202,10 @@ JQUERY笔记：
           5、
           6、$("#div1").width（）//content,没参数是获取，有参数是设置
              $("#div1").innerWidth（）//content+padding//没参数是获取，有参数是设置
-             $("#div1").outerWidth（）//content+padding+border//没参数是获取，有参数是设置
+                         $("#div1").position（）//获取匹配元素中第一个元素的当前坐标，相对指离该元素最近的而且被定位过的祖先元素的坐标/没参数是获取，有参数是设置
+ $("#div1").outerWidth（）//content+padding+border//没参数是获取，有参数是设置
              $("#div1").outerWidth（true）//content+padding+border+margin//没参数是获取，有参数是设置
           7、$("#div1").offset（）//在匹配的元素集合中，获取的第一个元素的当前坐标，或设置每一个元素的坐标，//没参数是获取，有参数是设置
-             $("#div1").position（）//获取匹配元素中第一个元素的当前坐标，相对指离该元素最近的而且被定位过的祖先元素的坐标/没参数是获取，有参数是设置
           8、$("#div1").offsetParent（）//取得离指定元素最近的含有定位信息的祖先元素//这个方法不接受任何参数。
    遍历：
           1、.eq()和:eq（）一样
@@ -260,7 +267,13 @@ JQUERY笔记：
 transform:rotate(45deg);旋转
 transform-origin:
  cnblogs starof
+ 3D:
+ 视角：是给父元素加的perspective 角度会不同
+            子元素加   角度相同
+ 视角源点：perspective-origin
+ 保持3D：preserve-3D;
  过渡：
+ 从一个状态到另一个状态
  transition:width 2s;
  transition:all 2s ease//  2s//延迟;
   <' transition-property '>： 检索或设置对象中的参与过渡的属性
@@ -279,11 +292,133 @@ transform-origin:
   }
   <' transition-delay '>： 检索或设置对象延迟过渡的时间
 动画：
+forwards 动画不回到初始状态
+<' animation-name '>： 检索或设置对象所应用的动画名称
+<' animation-duration '>： 检索或设置对象动画的持续时间
+<' animation-timing-function '>： 检索或设置对象动画的过渡类型
+<' animation-delay '>： 检索或设置对象动画延迟的时间
+<' animation-iteration-count '>： 检索或设置对象动画的循环次数
+<' animation-direction '>： 检索或设置对象动画在循环中是否反向运动
+<' animation-fill-mode '>： 检索或设置对象动画时间之外的状态
+<' animation-play-state '>： 检索或设置对象动画的状态。w3c正考虑是否将该属性移除，因为动画的状态可以通过其它的方式实现，比如重设样式
+animation:xx
+@key frame{
+0%{}
+50%{}
+100%{}
+}
+@key frame{
+form
+{}
+to{}
+
+}
+HTML5：html5shiv.js  让IE678支持新的标签
+花瓣网图片网站   ico制作小图标
+1、语义化标签 便于开发者阅读和写出更优雅的代码，有利于爬虫
+什么是标签语义化
+
+标签的语义
+
+通过标签判断内容语义，例如根据h1标签判断出内容是标题，根据<p>判断内容是段落、<input>标签是输入框等。判断标签是否语义化去掉样式，看网页结构是否组织良好有序，是否仍然有很好的可读性。
+
+为什么标签要语义化
+
+1. 搜索引擎友好。
+2. 更容易让屏幕阅读器读出网页内容。
+3. 去掉或样式丢失的时候能让页面呈现清晰的结构。
+4. 便于团队开发和维护。
+如何使标签更具语义化
+
+标题内容型标题使用<h2>而不是<div class="h2">,段落使用<p>标签，锚点使用<a>。表单分组表单要用<fieldset>标签包起来，并用<legend>标签进行说明表单的用途。每个<input>标签对应的说明文本都需要使用label标签，并且通过为<input>设置id属性，在<label>标签中设置“for=someId”来让说明文本和相应的<input>关联起来。表格表格标题要使用<caption>，表头使用<thead>包围，主体部分使用包围，尾部使用tfoot包围，表头和一般单元格要区分开，表头用th,一般单元格用td`。应注意的问题
+
+尽可能减少使用无语义标签div和span。
+语义不明显，可以用p也可以使用div的情况下，尽量用p。
+不要使用纯样式标签，例如b、font和u等，改用CSS设置。
+使用HTML5的结构元素，HTML5新特性一节中会介绍。
+部分标签全称与中文翻译
+<header></header>
+nav
+footer
+<input>
+<datalist >//下拉选框
+</datalist>
+fi
+上下外边距16 左右外边距40
+2、视频与音频
+格式化工厂
+<video src="" autoplay width controls> </video>
+<aduio src="" autoplay  controls></audio>
+3、
+4、json:javascript object notation 前后端传值的格式 用字符串表示js对象
+var str = JSON.stringify(odj);//对象转换字符串
+var obj = JSON.parse(str);//字符串转化为对象
+在线校验JSON格式
+XML:不怎么用了
+<userinfo></userinfo>
+基本数据类型（number string boolean null undefined）是存在栈里
+引用类型是存在堆里
+深拷贝：
+function clone(obj){
+var newObj = {};
+for(var p in obj){
+if(typeof obj[p] == "obj"){
+ newObj[p] = clone(obj[p]);
+}
+else{
+newObj[p] = obj[p];}
+}
+}
+
+eval 可以解析各种字符串  不安全
+自定义属性 data-aa="123"最好写data-
+h5:dataset.aa
+jq:$().data(aa);
+js上单线程的
+浏览器是多线程的
+<script src="" ></script>
+<script src=""async ></script>异步加载 w3c提出 下载完就执行 顺序会乱
+<script src=""defer ></script>异步加载 IE提出 先下载后执行
+CDN:Content Delivery  Network    内容分发网络   优化性能
+跨域：同源策略语
+跨域的几种情况：
+http://www.a.com       http://www.b.com     域名不同
+http://www.qq.com      http:/new.qq.com     主域和子域
+http://www.a.com8080   http://www.a.com:8081 端口号不同
+http://www.a.com       http://www.a.com      协议不同
+所有src 不存在跨域问题
+跨域方式：
+1、JSONP: json padding  利用script 标签的src 属性利用GET传值方式 进行跨域 -----get
+post: 传的大 不是明文  传表单用
+get:在头里传的少 是明文
+2、iframe: 增加dom 结构 对搜索引擎不友好 不建议使用 ------get
+3、服务器代理方式  后端跨域 没有问题 只有前端有跨域问题
+4、h5:postMessage  ------post
+
+XAMPP 用于开发
+$(function(){
+$get(""{});
+});
+CANVAS:做游戏什么的
+    REQUIRE:
+模块化开发，文件的依赖加载
+require(["yy"],function(yy){});
+define([""],function(){
+return xx});
+define(["xx"],function(xx){
+return yy});
+怎样判断是不是数组;
+{arr.constructor== Array
+arr instanceof Array
+}
 
 
-
-
-
+requireJS  AMD 异步   依赖前置
+SEAJS     CMD   通用  依赖就近
+改变this 的几种方式：
+1、fn.call()第一个参数是this 的指向  后面的参数是函数传参
+2、fn.apply()第一个参数是this 的指向  后面的参数是函数传参（以数组的形式）
+3、fn.bind()第一个参数是this 的指向  后面的参数是函数传参  不会直接调用函数 想要调用就加（）
 
 
 注意：
@@ -305,5 +440,8 @@ element.style//是指在js里设置的属性
    10、图片有时自己会大一点，用浮动和display:block就会解决
    11、在IE 6中不能给完全透明的元素绑定的事件如要绑定必须有颜色
    12、背景颜色的包括padding+border
+   13、所有有src属性的都有onload事件
    张鑫旭
+   阮一峰
+   23种设计原理
 
