@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>响应式布局练习</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h3{
+            width: 960px;
+            height: 100px;
+            background: #cccccc;
+            line-height: 100px;
+            text-align: center;
+            margin: 30px auto;
+            color: #ffffff;
+        }
+        #bonner {
+            width: 960px;
+            margin: 0 auto;
+        }
+        #bonner img{
+            width: 960px;
+            display: block;
+        }
+        #content {
+            width: 960px;
+            height: 300px;
+            margin: 0 auto;
+        }
+        #left{
+            width: 600px;
+            height: 300px;
+            float: left;
+            background: #00ff00;
+            margin-right: 30px;
+            display:table;
+        }
+        #right{
+            width: 330px;
+            height: 300px;
+            float: left;
+            background: #ffff00;
+            display: table;
+        }
+        #footer{
+            clear:both;
+        }
+        p{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        @media(max-width:959px){
+            h3{
+                width: 100%;
+            }
+            #bonner,#bonner img {
+                width: 100%;
+            }
+            #content {
+                width: 100%;
+            }
+            #left{
+                width: 60%;
+                margin-right: 3%;
+            }
+            #right{
+                width: 37%;
+            }
+        }
+        @media(max-width: 479px){
+            #left,#right{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <h3>页头</h3>
+</div>
+<div id="nav">
+    <h3>导航</h3>
+</div>
+<div id="bonner">
+    <img src="img/01.jpg" alt="图片加载失败"/>
+</div>
+<div id="content">
+    <div id="left">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sem erat, egestas quis luctus ut, rhoncus vitae risus. Integer venenatis libero sit amet sapien dictum, quis bibendum mi volutpat. Cras pretium quam quis magna facilisis, eget feugiat nisi lacinia.</p>
+    </div>
+    <div id="right">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sem erat, egestas quis luctus ut, rhoncus vitae risus. Integer venenatis libero sit amet sapien dictum, quis bibendum mi volutpat. Cras pretium quam quis magna facilisis, eget feugiat nisi lacinia.</p>
+    </div>
+</div>
+<div id="footer">
+    <h3>页脚</h3>
+</div>
+</body>
+</html>

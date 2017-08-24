@@ -1,6 +1,11 @@
 <meta charset = "UTF-8"> 表示字符集
 <meta name ="keyWords" content =""> 表示关键字
 <meta name ="description" content =""> 表示网站描述
+em 是相对于父元素字体大小的倍数
+rem r:root根 相对于html字体大小的倍数 用于响应式布局
+rem.js
+document body
+documentEvent html
 图片：
 .png:可以透明
 Z-INDEX:
@@ -58,6 +63,12 @@ display:block;
 clear:both;
 
 }
+多行文字居中：
+父元素：
+display:table;
+子元素：
+display:table-cell;
+
 行及元素在块级元素中屏居中
 text-line:center;
 line-height:
@@ -415,10 +426,51 @@ arr instanceof Array
 
 requireJS  AMD 异步   依赖前置
 SEAJS     CMD   通用  依赖就近
+
+
+整站开发：
+流程：
+1、规划项目的目录结构
+2、分析网站需要引入哪些外部文件（js、css）
+3、分析psd
+    （1）分析页面由哪几部分组成的
+    （2）页面当中哪些部分是要被重用的
+    （3）页面当中哪些需要封装成组件
+    （4）页面当中哪些图片需要做成css精灵
+4、为后端开发人员预留好接口
+5、与产品经理沟通好产品需要兼容什么浏览器、需要兼容什么样的终端设备
+
+
+切图：
+
 改变this 的几种方式：
 1、fn.call()第一个参数是this 的指向  后面的参数是函数传参
 2、fn.apply()第一个参数是this 的指向  后面的参数是函数传参（以数组的形式）
 3、fn.bind()第一个参数是this 的指向  后面的参数是函数传参  不会直接调用函数 想要调用就加（）
+移动开发：
+适应手机分辨率
+<meta name= "viewport"
+content="device-width", user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum=1.0>
+RWD 响应式 流式布局
+navigator.userAgent判断是什么类型 （移动端还是pc端）最早浏览器网警公司
+location.href="";跳转
+媒体查询：
+<link rel="stylesheet" href=""  media=""/>
+代码段：
+@media (max-width=600px){
+div{
+float:left;
+}
+}
+@media(orientation:landscape){/*横屏*/}
+@media(orientation:portrait){/*竖屏*/}
+@media(-webkit-device-pixel-ratio:2){//DPR
+
+}
+分辨率：breakpoint
+bootcss网站：Bootstrap  响应式布局v3.x
+respond.js 让IE也支持css3
+
 
 
 注意：
@@ -444,4 +496,7 @@ element.style//是指在js里设置的属性
    张鑫旭
    阮一峰
    23种设计原理
+   debugger  在调试的时候用
+   themforst nnnbb                                                                                                                                                                                                                                                                                                                                                                                                             nbbbbbnvcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccb
+   lantern
 
