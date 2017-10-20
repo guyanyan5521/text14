@@ -1,0 +1,114 @@
+body{
+    height: 10000px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    border: 0;
+    text-decoration: none;
+}
+.wrapper{
+    width: 720px;
+    margin: 0 auto;
+}
+#header{
+    height: 99px;
+    background: #DCDCDC;
+    padding-top: 5px;
+
+}
+#header .wrapper{
+    height: 99px;
+    display : flex;
+    background: #ffffff;
+    position: relative;
+}
+#menu{
+
+    flex-grow:1;
+    width: 0;
+}
+#logo {
+    flex-grow: 1;
+    width: 0;
+}
+#login{
+    flex-grow:1;
+    width: 0;
+}
+#menu-icon{
+    width: 40px;
+    height: 25px;
+    position: absolute;
+    top:50%;
+    left:20px;
+    margin-top: -20px;
+    padding: 0 0 5px 5px;
+}
+#menu-icon p{
+    width: 30px;
+    height: 20px;
+    font-size:12px;
+    text-align: center;
+}
+#image{
+    width: 74px;
+    height: 74px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /*margin-top:-37px ;*/
+}
+#image img{
+    width: 73px;
+    height: 73px;
+}
+#login .content{
+    height: 99px;
+    width: 80px;
+    position: absolute;
+    top:50%;
+    right:20px;
+    margin-top: -20px;
+}
+#login span{
+    font-size: 16px;
+}
+#login .select{
+    margin-left: -5px;
+    margin-right: -5px;
+
+}
+#login a{
+    color: #B89F7A;
+    font-weight: 700;
+    font-size: 14px;
+
+}
+
+#advert .big-img{
+    height: 500px;
+    background: url("../img/kv-desktop-cn-20170724152533-r-q100-m111111.jpg") no-repeat ;
+    -webkit-background-size:cover;
+    background-size:cover;
+}
+#advert p{
+    width: 720px;
+    height: 97px;
+    font-size: 1.125em;
+    font-weight: 400;
+    font-family: AvenirRoman, HelveticaNeue-Light, Helvetica Neue, arial, Hiragino Sans GB, ¶¬ÇàºÚÌå, Microsoft YaHei New, Microsoft Yahei, Î¢ÈíÑÅºÚ, ËÎÌå, SimSun, STXihei, »ªÎÄÏ¸ºÚ, sans-serif;
+    color: #707070;
+    margin: 50px auto;
+}
+#summery img{
+    width: 345px;
+    height: 345px;
+}

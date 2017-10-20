@@ -470,6 +470,104 @@ float:left;
 分辨率：breakpoint
 bootcss网站：Bootstrap  响应式布局v3.x
 respond.js 让IE也支持css3
+ES6:
+1、let 定义变量 变量提升（用 var 定义过的）
+let 与 var 的区别：
+1、let 没有变量提升
+2、let变量不能重复声明
+3、临时失效区（在let 定义的区域不允许其他同名的变量进来）
+4、块级作用域（let const）
+5、
+const 定义常量 不能重复复值
+但是定义的对象就可以重复复值因为对象存储的是地址
+不想要对象重复复值： Object.freeze(变量名);
+
+（var NUM = 10; 定义常量全大写）
+CLASS:
+class user{
+constructor(aa){
+this.aa = aa;
+}
+say(){
+console.log();
+}
+}
+class Son extends User{
+constructor(aa,bb){
+super(aa);
+this.bb = bb;
+}
+say(){}
+}
+static: 可以改变方法的生存周期
+static 修饰方法的话在类里就有方法用类来调用，如果没有只有在实地化对象的时候才有方法用实地化对象调用方法。
+set:
+var s = new Set();
+s.add(1);
+s.add(2);
+s.delete(2);
+s.clear();
+ var keys = s.keys ();
+ for(var k of values){
+ console.log(k);
+ }
+  var values = s.values ();
+  for(var v of values){
+  console.log(v);
+  }
+
+ var entries= s.entries ();
+  for(var e of values){
+  console.log(e[0],e[1]);
+  }
+  set键不允许重复
+  MAP:
+  var m = new Map();
+   var m = new Map();
+
+          m.set(1,1);
+          m.set('b',2);
+          m.set('b',3);
+          m.set('1',4);
+            m.delete("b");
+             m.clear();
+
+  map的键可以是任何类型
+  arrow 箭头函数 ()=>{} // 在只有一个参数的时候可以不用加小括号 在只有一个语句的时候可以不用加花括号
+  不能使用arguments
+    var fn = (...arg)=>{ //... 扩展运算符  rest参数（...arg）（将多个数变成数组形式 可以反过来数组变成单个数输出）
+    console.log(arg);
+    }
+    箭头函数中this 是已经定义的this
+    在定义一个对象中this是window
+    例子：
+    数组链接：
+    var a3 = [...a1,...a2];
+    var a3 = a1.concat(a2)
+    number.isNan
+    number.trunc
+    number.isinteger//判断整形
+    object.assign();对象和并
+    可以多个对象合并
+    如果合并的对象中没有对象则是深拷贝
+    如果对象中含有对象是浅拷贝
+    object.keys()
+    Object.vabelus()
+    array.of()和[]一样
+    array.from()//转化成数组
+    copywithin(a,b,c)
+    a   从哪个位置开始替换
+    b   从哪个位置开始复制
+    c  从哪个位置复制结束
+    find()返回值
+    findIndex()返回下标
+    str.includeS()
+    str.startsWith()
+     str.endsWith()
+     str.repeat()
+    str = `  ${}`;可以直接写字符 和空格 直接进行运算
+
+
 
 
 
@@ -482,9 +580,10 @@ element.style//是指在js里设置的属性
 5、类：具有相同属性和对象的集合
    对象：具体的对象
    this:当前对象的引用,当前实地化对象
-   属性是定义在构造函数里
+   属性是定义在构造函数里如果属性写在原型里当属性是定义一个对象时会造成资源共享的麻烦（一个新的变量改动一个值其他变量的属性值也变化）
    方法是定义在原型（prototype）里,效率高，类名.prototype.方法名 = function(){};
    原型链：当一个对象执行一个方法时，先在构造函数里找如果有就不再找，找不到在上原型里找，原型里找不到就去object找。就是一级一级往上找
+   继承： var u = new user();类名.prototype = u;
    6、cooliek不安全，只能存4K,有的只能存20条,随着每次请求从客户端发送到服务端
    7、.trim()消除字符串前后的空格
    8、.split("")//将字符串分割成数组
@@ -493,10 +592,13 @@ element.style//是指在js里设置的属性
    11、在IE 6中不能给完全透明的元素绑定的事件如要绑定必须有颜色
    12、背景颜色的包括padding+border
    13、所有有src属性的都有onload事件
+6、闭包：一个外部函数 里面有一个内部函数 内部函数调用了外部函数的局部变量
+当外部函数执行完成之后 局部变量不会被释放 内部函数可以一直使用
+7、arguments.callee  调用函数本身
    张鑫旭
    阮一峰
    23种设计原理
    debugger  在调试的时候用
-   themforst nnnbb                                                                                                                                                                                                                                                                                                                                                                                                             nbbbbbnvcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccb
+   themeforest nnnbb                                                                                                                                                                                                                                                                                                                                                                                                             nbbbbbnvcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccb
    lantern
 

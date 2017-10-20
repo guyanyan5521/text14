@@ -1,0 +1,99 @@
+body {
+    margin:0;
+    height: 1000px;
+    font-family: 'Martel Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+
+
+
+}
+
+
+/*top¿ªÊ¼*/
+/* Demo Buttons Style */
+
+#canvas{
+    width: 100%;
+    height: 100%;
+
+}
+@import url(http://fonts.useso.com/css?family=Martel+Sans:200,300,400,800,900);
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+section {
+    height: 500px;
+
+    background: #060e1b;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto 0px;
+    opacity:1 ;
+}
+section a {
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-size: 4.875em;
+    font-weight: 900;
+    color: #fff;
+}
+section a:after, section a:before {
+    content: '';
+}
+
+
+section.p14 a {
+    width: 500px;
+    height: 94px;
+    line-height: 94px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -47px;
+    z-index: 10;
+}
+section.p14 a:before, section.p14 a:after {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    top: -35%;
+    right: -10%;
+    -webkit-transition: all 1s cubic-bezier(0.45, 0.76, 0.58, 0.94);
+    -moz-transition: all 1s cubic-bezier(0.45, 0.76, 0.58, 0.94);
+    transition: all 1s cubic-bezier(0.45, 0.76, 0.58, 0.94);
+}
+section.p14 a:before {
+    background-color: #060e1b ;
+    z-index: -1;
+}
+section.p14 a:after {
+    background-color: #fff;
+    z-index: -2;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+}
+section.p14 a:hover:after {
+    -webkit-transform: scale(1) translate(10px);
+    -moz-transform: scale(1) translate(10px);
+    -ms-transform: scale(1) translate(10px);
+    -o-transform: scale(1) translate(10px);
+    transform: scale(1) translate(10px);
+}

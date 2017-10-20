@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+<ul>
+    <li>001</li>
+    <li>002</li>
+    <li>003</li>
+</ul>
+<script>
+  //  var a =5;
+    //var a= 3;
+   // alert(a);
+  //闭包
+    var ali = document.getElementsByTagName ('li');
+//    for(var i=0; i<ali.length ; i++){
+//        (function(index){
+//                    ali[i].onclick = function (){
+//                        alert(index);
+//                    }
+//                }
+//        )(i)
+//    }
+//  for(let i=0; i<ali.length ; i++){
+//
+//                  ali[i].onclick = function (){
+//                      alert(i);
+//                  }
+//
+//  }
+    const NUM = {
+      LI: 1
+  };
+  Object.freeze(NUM);
+    NUM.LI = 2;
+    alert(NUM.LI);
+
+</script>
+</body>
+</html>
