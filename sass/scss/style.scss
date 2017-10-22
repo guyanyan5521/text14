@@ -1,0 +1,31 @@
+
+
+$aa:#c3ff80;
+$test:".test";
+$font:'font';
+#{$test+ 1}{
+  color:#000;
+  #{$font+"-size"}:20px;
+}
+
+body{
+  color:#aabbcc;
+  font-size:12px;
+  height:800px;
+
+}
+ul{
+  backgound-color:$aa;
+  li{
+    color:#ff0000;
+    a{
+      font:20px;
+      &:hover{
+        font:30px;
+      }
+      &-test{
+      color:#000000;
+    }
+    }
+  }
+}
