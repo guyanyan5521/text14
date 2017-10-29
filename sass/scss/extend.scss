@@ -1,0 +1,26 @@
+@import"base";
+div{
+  color:#000000;
+  font-size: 34px;
+  a{
+    text-decoration: none;
+  }
+}
+p{
+  @extend div;
+  background: #000;
+}
+$flag : false;
+span{
+  @if(flag){
+    color:#00ff00;
+  }
+  else{
+   color:#060e1b;
+  }
+}
+@for $i from 1 to 4{
+.col-#{$i}{
+  width:20px * $i
+}
+}
