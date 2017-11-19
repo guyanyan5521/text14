@@ -1,0 +1,89 @@
+bootstrap简介：
+1、简洁、直观、强悍的前端开发框架，让web开发更迅速、简单。
+2、来自Twitter，是目前很受欢迎的前端框架之一。
+3、Bootstrap 是基于HTML\CSS\JAVASCRIPT的，让书写代码更容易。
+4、移动优先，响应式布局开发。
+主要内容：
+一、bootstrap栅格系统
+概念
+- 分十二列
+   》row 行
+   》col 列
+   lg：低于1200就发生变化从水平变垂直
+    col-lg-1
+    col-lg-2
+    col-lg-3
+    col-lg-4
+    col-lg-5
+    col-lg-6
+    col-lg-7
+    col-lg-8
+    col-lg-9
+    col-lg-10
+    col-lg-11
+    col-lg-12
+    md:低于992
+    sm:低于768
+    xs:移动端的布局不会改变
+ - 组合模式
+ <div class="col-g-4 col-md-6"></div>
+ <div class="col-g-4 col-md-6"></div>
+ <div class="col-g-4 col-md-6"></div>
+ <div class="col-g-4 col-md-6"></div>
+- 阈值
+   》12000>=
+   》992>=
+   》768>=
+   》768<
+2、容器  不要嵌套使用
+- container-fluid
+   》流体布局 自适应流体布局 padding-left:15px/padding-right:15px;无固定宽度
+   在<div class="row"></div>中写是没有内边距的
+- container
+   》固定布局 两边有空隙 padding-left:15px;padding-right:15px;
+   width:
+   》1170
+   》970
+   》750
+   》auto
+   如果自己设定宽度：width:100px !important;
+3、其他
+- 列偏移
+   》col-[*]-offset-*
+   例：col-lg-offset-4
+- 列排序
+   》col-[*]-push-* 向右走
+   例：col-lg-push-5
+   》col-[*]-pull-* 向左走
+- 嵌套
+- 清浮动
+*列偏移和列排序的区别：
+列偏移：只能往右走，在有多个元素存在的情况下当一行排不下的时候会在下一行偏移
+列排序：不会有上述的情况
+二、响应式工具
+概念
+  - 针对不同设备展示或隐藏页面内容
+可见类
+  - visible-*-*
+ 例： visible-lg-block
+      》lg md sm xs
+      》block inline inline-block
+  - hidden-*
+ 例： hidden-lg
+  固定定位：affix
+  浮动：pull-right向右浮动 pull-left向左浮动
+打印类
+  - visible-print-* hidden-print
+
+实例：天猫侧边栏
+三、Glyphicons字体图标
+好处
+   - 减少请求
+   - 容易控制样式
+   - 例子：淘宝
+用法
+   - font-face
+   - 字体路径
+   例：<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+自制图标
+   - http://jingyan.baidu.com/article/f79b7cb346cf499145023e78.html

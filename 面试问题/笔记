@@ -567,9 +567,24 @@ s.clear();
      str.repeat()
     str = `  ${}`;可以直接写字符 和空格 直接进行运算
 
+AJAX:
+ajax:不刷新页面的请求。
+有两个方法
+get和post不是jquery特有的它只是一个数据类型
+$.get() //从服务端得到一些东西
+$.post()  //从客户端发送一些东西到服务端，表单提交
+区别：
+get不安全因为get的请求会显示在ul里，get的参数是明文的会被看到
+post安全，post的参数不会被看到
 
-
-
+WEBPACK:
+网站：英文：https://webpack.js.org
+     中文： https://doc.webpack-npm chain.org/
+     Github: https://github.com/webpack/webpack
+功能：
+打包
+转换 （比如 sass、less等）
+优化
 
 注意：
 1、对象.style属性只能获取内联样式的值，他可以设置值
