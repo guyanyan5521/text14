@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var person = {
+        name: "Brendan Eich",
+        hello: function(thing) {
+            console.log(this);
+            console.log(this + " says hello " + thing);
+        }
+    }
+
+    // this:
+    // person.hello("world")
+
+    // desugars to this:
+    person.hello.bind('lili', "world")();
+    person.hello.call('lili', "world");
+    person.hello.apply('lili', ["world"]);
+</script>
+</body>
+</html>

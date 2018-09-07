@@ -145,8 +145,21 @@ function play(){
         aLi2[1].onclick();
     },1000);
 }
+    slideObj.addEventListener('touchend', function(e) {
+        if(Math.abs(currentMovex) > Math.abs(startx)){
+            currentMovex += -titleWidth*2;
+            if (Math.abs(currentMovex) >= len){ currentMovex = -len;}
+        }
+        else if(Math.abs(currentMovex) < Math.abs(startx)){
+            currentMovex += titleWidth*2;
+            if (currentMovex >= 0) {currentMovex = 0;}
+        }
+        slideObj.firstElementChild.style.transitionDuration="600ms";
+        slideObj.firstElementChild.style.transform = 'translateX(' + currentMovex + 'px)';
 
-
+    }, 'false');
+    if (Math.abs(currentMovex) >= len){ currentMovex = -len;}
+    else if (currentMovex >= 0) {currentMovex = 0;}
 </script>
 </body>
 </html>

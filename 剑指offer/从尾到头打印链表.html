@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 从尾到头打印链表
+    // 时间限制：1秒 空间限制：32768K 热度指数：648533
+    // 输入一个链表，按链表值从尾到头的顺序返回一个ArrayList。
+    // 思路：利用递归算法
+    // arguments.callee（）调用本身
+    function printListFromTailToHead(head)
+    {
+        var arrayList=[];
+        function Head(head)
+        {
+            if(head!=null){
+                arguments.callee(head.next)
+                arrayList.push(head.val);
+            }
+            return arrayList;
+        }
+        return  Head(head)
+    }
+    // 思路二：
+    // 利用一个数组接受链表的内容，
+    // 再讲数组中的内容颠倒一下
+    <!--reverse() 方法用于颠倒数组中元素的顺序。-->
+    function printListFromTailToHead2(head)
+    {
+        // write code here
+        var arr=[];
+        while(head){
+            arr.push(head.val);
+            head=head.next;
+        }
+        return arr.reverse();
+    }
+</script>
+</body>
+</html>
+<!--知识点-->
+<!--reverse() 方法用于颠倒数组中元素的顺序。-->

@@ -1,0 +1,31 @@
+
+问题：判断是否是小程序环境
+方法一: function footerShow() {
+	if(window.__wxjs_environment === 'miniprogram'){
+	  $('.footer_wrap').css('display','flex');
+	  $('#toMinPgm').on('click',function(){
+		wx.miniProgram.redirectTo({url: '/pages/mine'});
+	  })
+	}else{
+		$('.footer_wrap').css('display','none');
+	}
+}
+if (!window.WeixinJSBridge || !WeixinJSBridge.invoke) {
+	document.addEventListener('WeixinJSBridgeReady', footerShow, false)
+} else {
+	footerShow()
+}
+原因：
+window.__wxjs_environment === 'miniprogram' Android手机中小程序环境下这个是undefined
+
+ 方法二:
+var smallPro=false;
+	//判断当前页面是否在小程序环境中
+	wx.miniProgram.getEnv(function(res) {
+	  console.log(res.miniprogram) // true
+	  if(res.miniprogram){
+	  smallPro=true;
+	  }else{
+	  smallPro=false;
+	  }
+	});
