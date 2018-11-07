@@ -1,0 +1,80 @@
+.about-header *{
+  margin: 0;
+  padding: 0;
+}
+.about-header ul,.about-header ol{
+  list-style: none;
+}
+.about-header body{
+  background: #f2f2f2;
+}
+.about-header a{
+  text-decoration: none;
+}
+.about-header img{
+  border: 0;
+}
+.about-header{
+  width: 100%;
+  height: 4rem;
+  background: url('../../img/regbg.jpg') no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.about-header img{
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 20%;
+  box-shadow: 0 0.1rem 0.1rem rgba(0,0,0,.3);
+  margin-top: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+.about-header p{
+  font-size: .4rem;
+  color: #fff;
+  margin-bottom: .5rem;
+}
+.about-content .con-top{
+  margin: 0.25rem 0.15rem;
+}
+.about-content .con-top span{
+  display: inline-block;
+  margin-bottom: 0.15rem;
+  font-weight: bold;
+}
+.about-content .con-top p{
+  padding: 0.15rem;
+  border: 0.01rem solid #09BB07;
+  font-size: 0.25rem;
+  background: #fff
+}
+.about-content .con-top i{
+  font-size: 0.6rem;
+}
+.about-content .con-top .weixin{
+  color: #09BB07;
+}
+.about-content .con-top .qq{
+  color: #3385ff;
+}
+.about-content .con-top .weibo{
+  color: #fa2f2f;
+}
+.about-content .modal{
+  width: 80%;
+  margin: 2.5rem auto;
+}
+.about-content .modal-body{
+  /*width: 80%;*/
+  text-align: center;
+}
+.about-content .modal-body img{
+  width: 3rem;
+  height: 3rem;
+  margin: 0.15rem;
+  display: none;
+}
+.about-content .modal-header h4{
+  font-size: 0.3rem;
+}
+

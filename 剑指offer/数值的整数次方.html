@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数值的整数次方</title>
+</head>
+<body>
+给定一个double类型的浮点数base和int类型的整数exponent。求base的exponent次方。
+思想：高效幂算法
+如果 N 是偶数，有XN=XN/2 * X N/2
+如果 N 是奇数，则有 XN =X (N-1)/2 * X (N-1)/2 * X
+<script>
+    // function Power(base, exponent)
+    // {
+    //     // write code here
+    //     return Math.pow(base,exponent)
+    // }
+    function Power(base, exponent)
+    {
+        // write code here
+        if(base<=0){
+            throw new Error("分母不能小于等于0");
+        }
+        else{
+            if(exponent===0){
+                return 1
+            }
+            else if(exponent <0){
+                if(-exponent%2==0){
+                    var r= 1/Power(base, -exponent/2)
+                    return r*r
+                }else{
+                    return 1/(Power(base,(-exponent-1))*base)
+                }
+            }
+            else{
+                if(exponent%2==0){
+                    var r= Power(base, exponent/2)
+                    return r*r
+                }else{
+                    return Power(base,(exponent-1))*base
+
+                }
+            }
+        }
+
+    }
+</script>
+</body>
+</html>

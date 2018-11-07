@@ -1,0 +1,141 @@
+.page-user-set *{
+  margin: 0;
+  padding: 0;
+}
+.page-user-set ul, .page-user-set ol{
+  list-style: none;
+}
+.page-user-set body{
+  background: #f6f7f1;
+}
+.page-user-set a{
+  text-decoration: none;
+}
+.page-user-set img{
+  border: 0;
+}
+/*通用样式结束*/
+.page-user-set .userset-1{
+  width: 100%;
+  height:2.5rem;
+  background: #ffffff;
+  border-bottom: 0.2rem solid #ecf0f1;
+  line-height:1.9rem;
+  padding: 0.2rem;
+
+
+}
+.page-user-set .userset-1 img{
+  width: 1.5rem;
+  height:1.5rem;
+
+}
+.page-user-set .user-font{
+  font-size: 0.25rem;
+  font-weight: 550;
+  margin-left: 0.15rem;
+
+}
+.page-user-set .font-2{
+  margin:0.83rem 0;
+  margin-left: 0.15rem;
+}
+.page-user-set .user-content{
+  float: right;
+}
+.page-user-set .user-content .vip{
+  color:#9e9e9e;
+}
+.page-user-set .user-content .btn{
+  font-size: 0.25rem;
+  padding: 0;
+}
+.page-user-set .userset-2{
+  height: 0.8rem;
+  padding: 0.2rem;
+  background: #ffffff;
+  border-bottom: 0.03rem solid #ecf0f1;
+  line-height:0.35rem;
+
+}
+.page-user-set .userset-3{
+  text-align: center;
+}
+.page-user-set .userset-3 img{
+  width: 3rem;
+  height: 2.1rem;
+  margin-top: 2rem;
+}
+.page-user-set .userset-3 p{
+  font-weight: bolder;
+  font-family: "\534E\6587\65B0\9B4F","\534E\6587\884C\6977";
+  font-size: 0.3rem;
+}
+.page-user-set .userset-4{
+  text-align: center;
+
+}
+.page-user-set .userset-5{
+  height:1rem;
+}
+.page-user-set .userset-6{
+  height:1rem;
+}
+.page-user-set .user-footer{
+  display: inline-block;
+
+  background: #ffffff;
+  font-size: 0.5rem;
+  text-align: center;
+  margin-left: 0.8rem;
+  margin-top: 0.9rem;
+}
+.page-user-set .cencle-box{
+
+  width:5rem;
+  border: 0;
+  color: #ec4a4a;
+  font-size: 0.4rem;
+  background: #ffffff;
+  margin-top: 0.35rem;
+  padding: 0.1rem 0;
+}
+/*弹层开始*/
+.page-user-set .btn-me{
+  border: 0;
+  color: #ccc;
+  background-color: #ffffff;
+
+}
+.page-user-set .btn-you{
+  border: 0;
+  color: #ccc;
+  background-color: #ffffff;
+
+}
+.page-user-set .btn-he{
+  border: 0;
+  color: #ccc;
+  background-color: #ffffff;
+
+}
+.page-user-set .modal-dialog{
+  width: 6rem;
+  height:5rem;
+  line-height: normal;
+  position: absolute;
+  top: 50%;
+  margin-top: -2.5rem;
+
+}
+.page-user-set 
+.btn-content{
+  width: 6rem;
+  height:5rem;
+
+}
+.page-user-set .modal-footer{
+  height: 1rem;
+}
+
+

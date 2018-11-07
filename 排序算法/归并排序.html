@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>归并排序</title>
+</head>
+<body>
+<script>
+    function mergeSort(arr) {  // 采用自上而下的递归方法
+        var len = arr.length;
+        if (len < 2) {
+            console.log(arr);
+            return arr;
+
+        }
+        var middle = Math.floor(len / 2),
+            left = arr.slice(0, middle),
+            right = arr.slice(middle);
+        return merge(mergeSort(left), mergeSort(right));
+    }
+
+    function merge(left, right) {
+        var result = [];
+        while (left.length>0 && right.length>0) {
+            console.log(left);
+            console.log(right);
+            if (left[0] <= right[0]) {
+                result.push(left.shift());
+            } else {
+                result.push(right.shift());
+            }
+        }
+        while (left.length)
+            result.push(left.shift());
+
+        while (right.length)
+            result.push(right.shift());
+        console.log(result);
+        return result;
+    }
+    var arr = [49, 38, 65, 97, 27, 49,  04];
+    console.log( mergeSort(arr));
+</script>
+</body>
+</html>

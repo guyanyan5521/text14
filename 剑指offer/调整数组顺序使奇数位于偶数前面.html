@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function reOrderArray(array)
+    {
+        // write code here
+        var qishu=[];
+        var oushu=[];
+        if(array.length <= 1){
+            return array;
+        }else{
+            array.map(function(e){
+                if(e%2==0){
+                    oushu.push(e);
+                }
+                else{
+                    qishu.push(e);
+                }
+            });
+            array=qishu.concat(oushu);
+            return array
+        }
+    }
+    var array=[1,2,3,4,5,6,7,8,9];
+    console.log(reOrderArray(array));
+</script>
+</body>
+</html>

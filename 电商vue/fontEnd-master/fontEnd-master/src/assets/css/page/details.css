@@ -1,0 +1,331 @@
+.page-details *{
+    margin: 0;
+    padding: 0;
+}
+.page-details ul,.page-details ol{
+    list-style: none;
+}
+.page-details body{
+    color: #333;
+}
+.page-details a{
+    text-decoration: none;
+}
+.page-details img{
+    border: 0;
+}
+.page-details{
+  background: #fff;
+}
+
+/*carousel开始*/
+.page-details .carousel{
+    width: 100%;
+    margin-bottom: 0.04rem;
+    border: 0.15rem solid #fff;
+    background: #fff;
+}
+.page-details .swiper-slide img{
+  width: 100%;
+  height: 5.8rem;
+}
+.page-details .swiper-pagination-bullet{
+  background:#000;
+}
+.page-details .swiper-pagination-bullet-active{
+  background:#fff;
+}
+
+.page-details .gooddetail{
+  border-bottom: 0.01rem solid #ddd;
+  margin: 0 0.1rem;
+  padding-bottom: 0.15rem;
+}
+.page-details .gooddetail .goodname{
+  margin: 0.1rem 0;
+}
+.page-details .gooddetail .price{
+  color: #09bb07;
+  
+}
+.page-details .gooddetail .like{
+  float: right;
+  color: #f5926b;
+  font-size: 0.08rem;
+  font-weight: bold;
+  border: 0.03rem solid #f5926b;
+  border-radius: 3px;
+  padding: 0.03rem 0.05rem;
+}
+.page-details .gooddetail .like i{
+  font-size: 0.05rem;
+}
+.page-details .stockdetail{
+  padding: 0.1rem 0;
+  margin: 0 0.1rem;
+}
+.page-details .stockdetail li{
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  font-size: 0.21rem;
+  color: #999;
+}
+/*carousel结束*/
+
+/*sale开始*/
+.page-details .sale{
+  margin: 0.15rem 0;
+  padding: 0.15rem 0.1rem;
+  background: #fff;
+}
+.page-details .sale span{
+  color: #fff;
+  font-size: 0.01rem;
+  background: #e33a35;
+  padding: 0.03rem 0.05rem;
+  border-radius: 3px;
+}
+.page-details .sale p{
+  display:inline;
+  font-size: 0.2rem;
+}
+
+.page-details .sale p b{
+  font-weight: 400;
+  color: #2d96d0;
+}
+.page-details .sale .next{
+  float: right;
+  font-size: 0.4rem;
+  color: #bec2c3;
+  margin-top: -0.14rem;
+}
+/*sale结束*/
+
+/*size开始*/
+.page-details .size{
+  /*margin: 0.15rem 0;*/
+  padding: 0.15rem 0.1rem;
+  background: #fff;
+  font-size: 0.21rem;
+  border-top: 0.1rem solid #f1f1f1;
+  border-bottom: 0.1rem solid #f1f1f1;
+}
+.page-details .size b{
+  float: right;
+  font-size: 0.4rem;
+  color: #bec2c3;
+  margin-top: -0.17rem;
+}
+/*size结束*/
+
+/*store开始*/
+.page-details .store{
+  margin: 0 0.1rem;
+  padding: 0.15rem 0;
+  background: #fff;
+  border-bottom: 0.01rem solid #ddd;
+}
+.page-details .store .enter{
+  font-size: 0.21rem;
+  padding-bottom: 0.15rem;
+  border-bottom: 0.01rem solid #ddd;
+}
+.page-details .store .enter p{
+  display: inline;
+}
+.page-details .store .enter span{
+  float: right;
+  color: #999;
+  margin-top: -0.16rem;
+}
+.page-details .store .enter span b{
+  font-size: 0.4rem;
+  color: #bec2c3;
+  margin-left: 0.1rem;
+}
+.page-details .store .safety{
+  color: #777;
+  font-size: 0.2rem;
+  margin-top: 0.15rem;
+}
+.page-details .store .safety i{
+  font-size: 0.2rem;
+  font-weight: bold;
+  color: #09bb07;
+}
+/*store结束*/
+
+/*checkbox开始*/
+.page-details .checkbox{
+  height: 0.8rem;
+  margin: 0 0.1rem;
+  margin-bottom: 0.15rem;
+  background: #fff;
+  font-size: 0.25rem;
+  text-align: center;
+  line-height: 0.5rem;
+  border-bottom: 0.01rem solid #ddd;
+}
+.page-details .checkbox .ckeckleft{
+  padding: 0.15rem 0;
+  display: inline-block;
+  width: 50%;
+  float: left;
+}
+.page-details .checkbox .checkright{
+  padding: 0.15rem 0;
+  display: inline-block;
+  width: 50%;
+  float: right;
+}
+.page-details .checkbox .selected{
+  color: #09bb07;
+  border-bottom: 0.03rem solid #09bb07;
+}
+/*checkbox结束*/
+
+/*checkcon开始*/
+.page-details .checkcon .comment{
+  padding: 0.15rem 0;
+  display: none;
+}
+.page-details .checkcon .comment li{
+  border-bottom: 0.1rem solid #f1f1f1;
+}
+.page-details .checkcon .comment li .con-header{
+  padding-top: 0.2rem;
+}
+.page-details .checkcon .comment li img{
+  width: 0.8rem;
+  height: 0.8rem;
+}
+.page-details .checkcon .comment li .time,.page-details .checkcon .comment li .con-size{
+  font-size: 0.21rem;
+  color: #999;
+}
+.page-details .checkcon .comment li div{
+  padding: 0 0.2rem;
+  padding-bottom: 0.1rem;
+}
+.page-details .checkcon .comment li p{
+  padding: 0 0.2rem;
+  padding-bottom: 0.1rem;
+}
+.page-details .checkcon .goodimg img{
+  width: 100%;
+}
+/*checkbox结束*/
+
+/*more开始*/
+.page-details .more{
+  margin-top: 0.15rem;
+  margin-bottom: 1rem;
+}
+.page-details .more .title{
+  text-align: center;
+}
+.page-details .more ul li{
+  width: 3.06rem;
+  float: left;
+  background: #fff;
+  padding: 0 0.08rem;
+  margin: 0.06rem 0.06rem;
+  position: relative;
+    
+}
+.page-details .more ul li img{
+  width: 2.9rem;
+  height: 2.9rem;
+}
+.page-details .more ul li .goodname{
+  height: 0.65rem;
+  font-size: 0.23rem;
+}
+.page-details .more ul li .price{
+  float: left;
+  font-size: 0.23rem;
+  font-weight: bold;
+  color: #09bb07;
+}
+.page-details .more .pb{
+  text-align: center;
+}
+.page-details .more a{
+  background: #fff;
+  border: 0.01rem solid #ccc;
+  color: #333;
+  padding: 0.1rem 0.5rem;
+  margin: 0.3rem 0;
+}
+/*more结束*/
+
+/*details-foot开始*/
+.page-details .details-foot{
+  width: 100%;
+  height: 1rem;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+}
+.page-details .details-foot a{
+  margin: 0;
+  padding: 0;
+}
+.page-details .details-foot .service{
+  display: inline-block;
+  float: left;
+  flex: 2;
+  height: 100%;
+  padding: 0.06rem 0;
+  border-right: 0.01rem solid #ddd;
+  border-top: 0.01rem solid #ccc;
+  text-align: center;
+}
+.page-details .details-foot .collect{
+  display: inline-block;
+  float: left;
+  flex: 2;
+  height: 100%;
+  padding: 0.06rem 0;
+  border-top: 0.01rem solid #ccc;
+  text-align: center;
+}
+.page-details .details-foot .service i,.details-foot .collect i{
+  font-size: 0.4rem;
+  font-weight: bold;
+}
+.page-details .details-foot .service i{
+  color: #09bb07;
+}
+.page-details .details-foot .collect i{
+  color: #f5926b;
+}
+.page-details .details-foot .service span,.details-foot .collect span{
+  display: block;
+  font-size: 0.21rem;
+  color: #333;
+}
+.page-details .details-foot .buycar{
+  display: inline-block;
+  height: 100%;
+  flex: 3;
+  background: #333;
+  color: #fff;
+  font-size: 0.31rem;
+  padding-top: 0.27rem;
+  text-align: center;
+}
+.page-details .details-foot .buyying{
+  display: inline-block;
+  height: 100%;
+  flex: 3;
+  background: #09bb07;
+  color: #fff;
+  font-size: 0.31rem;
+  padding-top: 0.27rem;
+  text-align: center;
+}
+/*details-foot结束*/

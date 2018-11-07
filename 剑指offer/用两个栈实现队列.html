@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用两个栈实现队列</title>
+</head>
+<body>
+delete
+<script>
+    // var array=[1,2,3,4,56,6,4]
+    // var o={a:1,c:3};
+    // console.log(array.pop());
+    //     delete o.a
+    //
+    // console.log( o);
+    var  array01=[];
+    var array02=[];
+
+    function push(node)
+    {
+        // write code here
+        array01.push(node);
+
+    }
+    function pop() {
+        if (array01.length > 2) {
+            array02 = array01.reverse();
+            var a = array02.pop();
+            array01 = array02.reverse();
+            return a;
+        }
+        else if (array01.length === 1) {
+            return array01.pop()
+        }
+        else {
+            return null
+        }
+    }
+//     var  array01=[];
+//     var array02=[];
+//
+//     function push(node)
+//     {
+//         // write code here
+//         array01.push(node);
+//
+//     }
+//     function pop()
+//     {
+//         if(array01.length >  1) {
+//             var k=array01.length
+//             for (var i = 0; i < k; i++) {
+//                 var a = array01.pop();
+//                 array02.push(a);
+//
+//             }
+//          var s=  array02.pop();
+//             var p=array02.length;
+//             for (var o = 0; o < p; o++) {
+//                 array01.push(array02.pop());
+//             }
+//             return s
+//         }
+// else if(array01.length ===1){
+//             array01.pop();
+//         }
+//          else{
+//             return null
+//         }
+//         // write code here
+//     }
+    push(1);
+    push(2);
+    push(6);
+    console.log( array01)
+    console.log(pop())
+</script>
+</body>
+</html>

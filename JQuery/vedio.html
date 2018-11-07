@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .bg_image{
+            width:100%;
+            background-size:100% 100%;
+            background-position:center;
+            background-repeat:no-repeat;
+            position:relative;
+        }
+        .bg_image a{
+            height:100%;
+            position:absolute;
+            display:block;
+            top:0;
+        }
+        .two_l{
+            width:50%;
+            left:0;
+        }
+        .two_r{
+            width:50%;
+            left:50%;
+        }
+        .three_l{
+            width:30%;
+            left:5%;
+        }
+        .three_m{
+            width:30%;
+            left:35%;
+        }
+        .three_r{
+            width:30%;
+            left:65%;
+        }
+        .video_box{
+            width:42.26666667%;
+            position:absolute;
+
+        }
+        .v01{
+            height:54.41%;
+            left:10%;
+            top:40.4255%;
+        }
+        .v02{
+            height:80.6306%;
+            left:48.4%;
+            top:9.46%;
+        }
+        .v03{
+            height:82.4885%;
+            left:10%;
+            top:10.138%;
+        }
+        .v04{
+            height:79.911%;
+            left:10.26666667%;
+            top:9.82143%;
+        }
+        .v05{
+            height:77.1552%;
+            left:48.8%;
+            top:10.34483%;
+        }
+        .v06{
+            height:76.17%;
+            left:10.533333%;
+            top:13.1915%;
+        }
+        .v07{
+            height:79.20354%;
+            left:48.66666667%;
+            top:11.504425%;
+        }
+        .v08{
+            width: 51.266667%;
+            height:85.091%;
+            left:43.266667%;
+            top:8.36364%;
+        }
+        .banner01{
+            padding-top:33.46666667%;
+            background-image:url(//pic0.iqiyipic.com/common/20180813/fujifilm_180813_h5_01.jpg);
+        }
+        .banner02{
+            padding-top:30.93333333%;
+            background-image:url(//pic3.iqiyipic.com/common/20180813/fujifilm_180813_h5_02.jpg);
+        }
+        .sec01_video{
+            padding-top:43.86666667%;
+            background-image:url(//pic2.iqiyipic.com/common/20180813/fujifilm_180813_h5_03.jpg);
+        }
+        .sec01_pro01{
+            padding-top:52.66666667%;
+            background-image:url(//pic1.iqiyipic.com/common/20180813/fujifilm_180813_h5_04.jpg);
+        }
+        .sec01_pro02{
+            padding-top:40%;
+            background-image:url(//pic2.iqiyipic.com/common/20180813/fujifilm_180813_h5_05.jpg);
+        }
+        .sec02_tit{
+            padding-top:37.06666667%;
+            background-image:url(//pic1.iqiyipic.com/common/20180813/fujifilm_180813_h5_06.jpg);
+        }
+        .sec02_video{
+            padding-top:29.6%;
+            background-image:url(//pic2.iqiyipic.com/common/20180813/fujifilm_180813_h5_07.jpg);
+        }
+        .sec02_pro{
+            padding-top:58.26666667%;
+            background-image:url(//pic0.iqiyipic.com/common/20180813/fujifilm_180813_h5_08.jpg);
+        }
+        .sec03_tit{
+            padding-top:36.66666667%;
+            background-image:url(//pic2.iqiyipic.com/common/20180813/fujifilm_180813_h5_09.jpg);
+        }
+        .sec03_video{
+            padding-top:28.93333333%;
+            background-image:url(//pic2.iqiyipic.com/common/20180813/fujifilm_180813_h5_10.jpg);
+        }
+        .sec03_pro{
+            padding-top:56.93333333%;
+            background-image:url(//pic3.iqiyipic.com/common/20180813/fujifilm_180813_h5_11.jpg);
+        }
+        .sec04_tit{
+            padding-top:38.8%;
+            background-image:url(//pic1.iqiyipic.com/common/20180813/fujifilm_180813_h5_12.jpg);
+        }
+        .sec04_video{
+            padding-top:29.86666667%;
+            background-image:url(//pic3.iqiyipic.com/common/20180813/fujifilm_180813_h5_13.jpg);
+        }
+        .sec04_pro{
+            padding-top:62.66666667%;
+            background-image:url(//pic2.iqiyipic.com/common/20180813/fujifilm_180813_h5_14.jpg);
+        }
+        .sec05_tit{
+            padding-top:36.93333333%;
+            background-image:url(//pic3.iqiyipic.com/common/20180813/fujifilm_180813_h5_15.jpg);
+        }
+        .sec05_video{
+            padding-top:30.93333333%;
+            background-image:url(//pic1.iqiyipic.com/common/20180813/fujifilm_180813_h5_16.jpg);
+        }
+        .sec05_pro{
+            padding-top:57.2%;
+            background-image:url(//pic3.iqiyipic.com/common/20180813/fujifilm_180813_h5_17.jpg);
+        }
+        .sec06_tit{
+            padding-top:37.46666667%;
+            background-image:url(//pic2.iqiyipic.com/common/20180813/fujifilm_180813_h5_18.jpg);
+        }
+        .sec06_video{
+            padding-top:31.33333333%;
+            background-image:url(//pic2.iqiyipic.com/common/20180813/fujifilm_180813_h5_19.jpg);
+        }
+        .sec06_pro{
+            padding-top:55.46666667%;
+            background-image:url(//pic3.iqiyipic.com/common/20180815/fujifilm_180813_h5_20.jpg);
+        }
+        .sec07_tit{
+            padding-top:36.93333333%;
+            background-image:url(//pic3.iqiyipic.com/common/20180813/fujifilm_180813_h5_21.jpg);
+        }
+        .sec07_video{
+            padding-top:30.13333333%;
+            background-image:url(//pic0.iqiyipic.com/common/20180813/fujifilm_180813_h5_22.jpg);
+        }
+        .sec07_pro{
+            padding-top:58%;
+            background-image:url(//pic3.iqiyipic.com/common/20180815/fujifilm_180813_h5_23.jpg);
+        }
+        .sec08_tit{
+            padding-top:35.06666667%;
+            background-image:url(//pic0.iqiyipic.com/common/20180813/fujifilm_180813_h5_24.jpg);
+        }
+        .sec08_video{
+            padding-top:36.66666667%;
+            background-image:url(//pic0.iqiyipic.com/common/20180815/21af45a4b4784757abb60cb6a21c40a7.jpg);
+        }
+        .sec08_pro01{
+            padding-top:58.66666667%;
+            background-image:url(//pic3.iqiyipic.com/common/20180813/fujifilm_180813_h5_26.jpg);
+        }
+        .sec08_pro02{
+            padding-top:62%;
+            background-image:url(//pic0.iqiyipic.com/common/20180813/fujifilm_180813_h5_27.jpg);
+        }
+        .sec09{
+            padding-top:23.46666667%;
+            background-image:url(//pic1.iqiyipic.com/common/20180813/fujifilm_180813_h5_28.jpg);
+        }
+        .mod-video:before {
+            padding-top: 56.4669% !important;
+        }
+        .mod-video .icon-videoPlay{
+            display:none !important;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="bg_image banner01"></div>
+<div class="bg_image banner02"></div>
+<div class="bg_image sec01_video">
+    <div class="video_box v01"></div>>
+</div>
+<div class="bg_image sec02_video">
+    <div class="video_box v02"></div>>
+</div>
+<div class="bg_image sec03_video">
+    <div class="video_box v03"></div>>
+</div>
+<div class="bg_image sec04_video">
+    <div class="video_box v04"></div>>
+</div>
+<div class="bg_image sec05_video">
+    <div class="video_box v05"></div>>
+</div>
+<script src="jquery-1.11.2.js "></script>
+<script>
+    var scrollPos =[];
+    for(var i=0;i< $(".video_box").length;i++){
+        scrollPos.push($(".video_box").eq(i).offset());
+    }
+    window.onscroll = function() {
+        var pos = window.scrollY;
+        var fixT = $('.nav-wrap').offset().top;
+        if (pos >= fixT) {
+            $('.fix-box').css({'position': 'fixed', 'top': '0'});
+        } else {
+            $('.fix-box').css({'position': 'relative', 'top': '0'});
+        }
+        for (var i = 0; i < scrollPos.length; i++) {
+            if (pos >= scrollPos[i]) {
+                $('.nav-box li').eq(i).addClass('active').siblings().removeClass('active');
+            }
+        }
+    }
+</script>
+</body>
+</html>

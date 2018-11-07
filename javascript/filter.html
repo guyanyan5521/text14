@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   //  var todos = [
+   //      { text: "Learn JavaScript", done: false },
+   //      { text: "Learn Vue", done: false },
+   //      { text: "Play around in JSFiddle", done: true },
+   //      { text: "Build something awesome", done: true }
+   //  ]
+   // function  filters(){
+   //    console.log(todos.filter(function (todo){
+   //        return todo.done;
+   //    }).length);
+   //    todos.forEach(function(todos){ var flog=todos => todos.done;  console.log( todos.done)  })
+   // }
+   // filters();
+
+
+
+
+   var obj = {
+       say: function() {
+           var f1 = ()=>{
+               console.log("1111",this);
+           }
+           f1();
+       }
+   }
+
+   var o = obj.say;
+   o();
+   console.log(o);
+   console.log(tobj.say);
+   obj.say();
+</script>
+</body>
+</html>

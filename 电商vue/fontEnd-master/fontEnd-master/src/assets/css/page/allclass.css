@@ -1,0 +1,54 @@
+.page-all-class *{
+    margin: 0;
+    padding: 0;
+}
+.page-all-class ul,.page-all-class ol{
+    list-style: none;
+}
+.page-all-class body{
+}
+.page-all-class a{
+    text-decoration: none;
+}
+.page-all-class img{
+    border: 0;
+}
+.page-all-class .content{
+  text-align: center;
+}
+.page-all-class .content ul li{
+  width: 50%;
+  height: 2.6rem;
+  float: left;
+  padding-top: 0.4rem;
+  font-size: 0.35rem;
+  
+}
+.page-all-class .content ul li i{
+  font-size: 0.8rem;
+}
+.page-all-class .content ul .a1{
+  background: #fcfafd;
+}
+.page-all-class .content ul .a2{
+  background: #edebee;
+}
+.page-all-class .content ul .a3{
+  background: #efedf0;
+}
+.page-all-class .content ul .a4{
+  background: #fedb10;
+  color: #fff;
+}
+.page-all-class .content ul .a5{
+  background: #d0d7dd;
+}
+.page-all-class .content ul .a6{
+  background: #fcfafd;
+}
+.page-all-class .content ul .a7{
+  background: #edeef3;
+}
+.page-all-class .content ul .a8{
+  background: #e3e1e4;
+}

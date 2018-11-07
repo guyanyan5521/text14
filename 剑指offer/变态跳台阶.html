@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变态跳台阶</title>
+</head>
+<body>
+一只青蛙一次可以跳上1级台阶，也可以跳上2级……它也可以跳上n级。求该青蛙跳上一个n级的台阶总共有多少种跳法。
+思想：2的（n-1）次幂
+知识点：Math.pow(x,y)方法可返回 x 的 y 次幂的值。
+如果结果是虚数或负数，则该方法将返回 NaN。如果由于指数过大而引起浮点溢出，则该方法将返回 Infinity。
+<script>
+    // function jumpFloorII(number)
+    // {
+    //     // write code here
+    //     if(number <3) {return number }
+    //     else{
+    //         var n=2
+    //         for(var i=3;i <= number;i++){
+    //             n=n*2;
+    //         }
+    //         return n
+    //     }
+    // }
+    function jumpFloorII(number)
+    {
+        // write code here
+        if(number <3) {return number }
+        else{
+            return Math.pow(2,number-1)
+        }
+    }
+    console.log(jumpFloorII(4))
+    console.log(jumpFloorII(5))
+    console.log(jumpFloorII(10))
+</script>
+
+</body>
+</html>

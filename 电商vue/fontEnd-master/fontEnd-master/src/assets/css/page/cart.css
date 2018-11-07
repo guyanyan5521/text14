@@ -1,0 +1,242 @@
+.page-cart *{
+    margin: 0;
+    padding: 0;
+}
+.page-cart ul, .page-cart ol{
+    list-style: none;
+}
+.page-cart body{
+    background: #f8f8f8;
+}
+.page-cart a{
+    text-decoration: none;
+}
+.page-cart img{
+    border: 0;
+}
+.page-cart b{
+    font-weight: 400;
+}
+/*editor开始*/
+.page-cart .editor{
+    width: 100%;
+    padding: 0.25rem 0.2rem;
+    background: #fff;
+    position: fixed;
+    z-index: 998;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.1);
+}
+.page-cart .ok{
+    font-size: 0.36rem;
+    margin-right: 0.1rem;
+    color: #38f;
+}
+.page-cart .empty{
+    font-size: 0.36rem;
+    margin-right: 0.1rem;
+    color: #38f;
+    display: none;
+}
+.page-cart .editor i{
+    font-size: 0.36rem;
+}
+.page-cart .editor p{
+    display: inline-block;
+    margin: 0;
+}
+.page-cart .editor a{
+    float: right;
+    font-size: 0.24rem;
+    color: #38f;
+    margin-top: 0.1rem;
+}
+/*editor结束*/
+
+/*list开始*/
+.page-cart .list{
+    margin-bottom: 1rem;
+    overflow: hidden;
+    
+}
+.page-cart .list ul{
+    margin-top: 1rem;
+}
+.page-cart .list li{
+    width: 100%;
+    height: 2.12rem;
+    border-bottom: 0.1rem solid #fff;
+    padding: 0.1rem 0.2rem;
+    position: relative;
+    background: #fafafa;
+}
+.page-cart .list .ok{
+    float: left;
+    line-height: 1.8rem; 
+}
+.page-cart .list .empty{
+    float: left;
+    line-height: 1.8rem;
+    display: none; 
+}
+.page-cart .list img{
+    width: 1.8rem;
+    height: 1.8rem;
+    float: left;
+    margin: 0 0.1rem;
+}
+.page-cart .list .goodname{
+    display: inline-block;
+    margin-left: 0.2rem;
+    margin-bottom: 0.45rem;
+}
+.page-cart .list .size{
+    font-size: 0.22rem;
+    color: #666;
+}
+.page-cart .list .price{
+    color: #f60;
+}
+.page-cart .list .number{
+    font-size: 0.22rem;
+    color: #666;
+    float: right;
+}
+.page-cart .buynum{
+    position: relative;
+    display: inline-block;
+    margin-left: 0.9rem;
+    margin-bottom: 0.85rem;
+    display: none;
+}
+.page-cart .buynum .num{
+    width: 0.85rem;
+    height: 0.6rem;
+    text-align: center;
+    float: right;
+    margin-right: 1.8rem;
+}
+.page-cart .buynum span{
+    display: inline-block;
+    font-size: 0.33rem;
+    width: 0.8rem;
+    height: 0.6rem;
+    line-height: 0.55rem;
+    text-align: center;
+    border: 0.01rem solid #999;
+    position: absolute;
+}
+.page-cart .buynum .add{
+    right: 1rem;
+    top: 0;
+    border-left: none;
+}
+.page-cart .buynum .sub{
+    right: 2.65rem;
+    border-right: none;
+}
+.page-cart .buynum .cancel{
+    border-color: #ccc;
+    background: #f2f2f2;
+    color: #bbb;
+}
+.page-cart .list .del{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    line-height: 1.9rem;
+    text-align: center;
+    font-size: 0.25rem;
+    width: 1.1rem;
+    background: #ff4343;
+    color: #fff;
+    display: none;
+}
+/*list结束*/
+
+/*foot开始*/
+.page-cart .foot{
+    height: 1rem;
+    width: 100%;
+    background: #fff;
+    border-top: 0.01rem solid #ccc;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+}
+.page-cart .foot .left-box{
+    float: left;
+}
+.page-cart .foot .ok{
+    line-height: 1rem;
+    padding-left: 0.2rem;
+    float: left;
+}
+.page-cart .foot .empty{
+    line-height: 1rem;
+    padding-left: 0.2rem;
+    float: left;
+    display: none;
+}
+.page-cart .foot .all{
+    display: inline-block;
+    line-height: 1rem;
+}
+.page-cart .foot .total{
+    display: inline-block;
+    color: rgb(255, 102, 0);
+    font-size: 0.22rem;
+}
+.page-cart .foot .min{
+    height: 100%;
+    width: 1.5rem;
+    float: left;
+    margin-top: 0.1rem;
+    margin-left: 1.8rem;
+}
+.page-cart .foot p{
+    display: inline-block;
+    font-size: 0.24rem;
+    color: #999;
+    float: right;
+}
+.page-cart .foot a{
+    height: 100%;
+    width: 1.8rem;
+    line-height: 1rem;
+    text-align: center;
+    float: right;
+    background: #ff4444;
+    color: #fff;
+}
+.page-cart .foot .del-all{
+    display: none;
+}
+.page-cart .foot .null{
+    color: #999 !important;
+    background: #f1f1f1 !important;
+}
+/*foot结束*/
+
+/*empty-list开始*/
+.page-cart .empty-list{
+    margin: 1rem 1rem;
+    text-align: center;
+}
+.page-cart .empty-list h4{
+    font-size: 0.32rem;
+    margin-bottom: 0.2rem;
+    color: #666;
+}
+.page-cart .empty-list p{
+    color: #999;
+}
+.page-cart .empty-list a{
+    display: inline-block;
+    border-radius: 3px;
+    color: #f60;
+    border: 0.01rem solid #f60;
+    padding: 0.1rem 0.6rem 0.13rem 0.6rem;
+    margin-top: 0.15rem;
+}
+/*empty-list结束*/

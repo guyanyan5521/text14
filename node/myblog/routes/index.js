@@ -6,7 +6,7 @@ var router = express.Router();
 
 router.get('/login', user.login);
 
-router.post('/login', user.checkLogin);
+    router.post('/login', user.checkLogin);
 
 router.get('/reg', user.reg);
 

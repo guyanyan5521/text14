@@ -41,6 +41,7 @@
         <li>003</li>
     </ul>
 </div>
+<div class="a" style="height:100px;width:100px;background:black;"></div>
 
 <script src="jquery-1.11.2.js "></script>
 <script>
@@ -48,8 +49,10 @@
         var $h1 =  $("#container h1");
         $h1.on("click",function(){
             $(this).next().stop(false, true).slideToggle(1000);
+            // $(this).css({ "color": "#ff0011", "background": "blue" });
 
         });
+
     });
 </script>
 </body>

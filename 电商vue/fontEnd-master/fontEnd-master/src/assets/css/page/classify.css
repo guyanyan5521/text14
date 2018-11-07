@@ -1,0 +1,84 @@
+.page-classify *{
+    margin: 0;
+    padding: 0;
+}
+.page-classify ul,.page-classify ol{
+    list-style: none;
+}
+.page-classify body{
+    background: #ecf0f1;
+}
+.page-classify a{
+    text-decoration: none;
+}
+.page-classify img{
+    border: 0;
+}
+/*details开始*/
+.page-classify .details img{
+    width: 100%;
+    margin-top: 0.3rem;
+}
+.page-classify .details .title{
+    padding: 0.1rem 0;
+    margin: 0.1rem 0.14rem;
+    border-bottom: 0.01rem solid #ddd;
+}
+.page-classify .details .title i{
+    font-size: 0.35rem;
+}
+.page-classify .details .title span{
+    font-size: 0.35rem;
+    font-weight: bold;
+}
+.page-classify .cooperation ul li b{
+    float: right;
+    font-size: 0.5rem;
+    font-weight: 400;
+    color: #bec2c3;
+    margin-top: -0.2rem;
+}
+.page-classify .details ul li{
+    width: 3.06rem;
+    float: left;
+    background: #fff;
+    padding: 0 0.08rem;
+    margin: 0.06rem 0.06rem;
+    position: relative;
+    
+}
+.page-classify .details ul li img{
+    width: 2.9rem;
+    height: 2.9rem;
+}
+.page-classify .details ul li .goodname{
+    height: 0.65rem;
+    font-size: 0.23rem;
+}
+.page-classify .details ul li .price{
+    float: left;
+    font-size: 0.25rem;
+    font-weight: bold;
+    color: #f60;
+}
+.page-classify .details ul li span{
+    float: right;
+    font-size: 0.4rem;
+    color: #aaa;
+}
+/*details结束*/
+
+/*page开始*/
+.page-classify .page{
+    border: 0.01rem solid #ccc;
+    margin: 0.5rem 0.1rem;
+}
+.page-classify .page a{
+    display: inline-block;
+    padding: 0.1rem 1.04rem;
+    font-size: 0.31rem;
+}
+.page-classify .page .prev{
+    border-right: 0.01rem solid #ccc;
+}
+/*page结束*/

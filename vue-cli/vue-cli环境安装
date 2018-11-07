@@ -25,7 +25,7 @@ package.json
   在package.json文件中修改成
  "scripts": {
     "vue": "vue init webpack vue-project（名字随便起）"
-安装vue脚手架输入：
+安装vue脚手架输入：vue init webpack projectname
  ，
     注意这里的“projectname” 是项目的名称可以说是随便的起名，
     但是需要主要的是“不能用中文”。

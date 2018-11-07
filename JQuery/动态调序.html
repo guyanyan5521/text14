@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{height:20px;background-color:yellow}
+    </style>
+</head>
+<body>
+<div id='p1'>This is a paragraph.11111</div>
+<div id='p2'>This is another paragraph.222222</div>
+<div id='div1'>333333333</div>
+<button class="btn1">用粗体文本替换所有段落</button>
+    <script type="text/javascript" src="jquery-1.11.2.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var p_1=document.getElementById('p1');
+        var p_2=document.getElementById('p2');
+        var d_c=document.createElement("div");
+        d_c = p_1;
+        d_c.id = 'p3'
+        var d_d=document.createElement("div");
+        d_d = p_2;
+        d_d.id='p4'
+//alert(d_d.innerHTML);
+        $(".btn1").click(function(){
+//$("#p2").replaceWith($("#p4").html());
+//$("#p1").replaceWith($("#p3").html());
+            $("#p2").replaceWith("<div>4444</div>");
+            $("#p1").replaceWith("<div>3333</div>");
+//$("#p1").replaceWith($t("#p4").html());
+// alert($("#p3").text());
+//alert($("#p4").text());
+        });
+    });
+</script>
+</body>
+</html>
