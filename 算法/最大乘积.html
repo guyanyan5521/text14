@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+//[编程题] 最大乘积
+时间限制：1秒
+
+空间限制：32768K
+
+给定一个无序数组，包含正数、负数和0，要求从中找出3个数的乘积，使得乘积最大，要求时间复杂度：O(n)，空间复杂度：O(1)
+输入描述:
+无序整数数组A[n]
+
+
+输出描述:
+满足条件的最大乘积
+
+输入例子1:
+3 4 1 2
+
+输出例子1:
+24
+<script>
+    function maxChengJi(arr){
+        arr.split(' ');
+        var resArr=[];
+        var result=0;
+        arr.forEach(function(arg,index,arr){
+            for(var i=0;i<arr.length;i++){
+                if(i!=index){
+                    for(var a=0;a<arr.length;a++){
+                        if(a!=index && a!=i){
+                            result=arg*arr[i]*arr[a];
+                            resArr.push(result);
+                        }
+                    }
+
+                }
+            }
+        });
+        resArr.sort(function (a,b){
+            {
+                return b-a;
+            }
+        });
+        return  resArr[0];
+    }
+    var arr=[3,4,1,2];
+    var a=maxChengJi(arr);
+    console.log(a);
+</script>
+<script>
+    while(line=readline()){
+        var lines = line.split(' ');
+        var resArr=[];
+        var result=0;
+        lines.forEach(function(arg,index,arr){
+            for(var i=0;i<arr.length;i++){
+                if(i!=index){
+                    for(var a=0;a<arr.length;a++){
+                        if(a!=index && a!=i){
+                            result= parseInt(arg)* parseInt(arr[i])* parseInt(arr[a]);
+                            resArr.push(result);
+                        }
+                    }
+
+                }
+            }
+        });
+        resArr.sort(function (a,b){
+            {
+                return b-a;
+            }
+        });
+        print(resArr[0]);
+    }
+</script>
+<script>
+
+    while(line=readline()){
+        var lines = line.split(' ');
+        var result=0;
+        var maxNum=0;
+        var minNum=0;
+        var threeNum=0;
+        if(lines.length>3){
+            for(var i=0;i<(lines.length-1);i++){
+                maxNum =parseInt(lines[i]);
+                if(maxNum<parseInt(lines[i+1])){
+                    threeNum=minNum;
+                    minNum=maxNum;
+                    maxNum=parseInt(lines[i+1]);
+                }
+
+            }
+            result=minNum* maxNum*threeNum;
+            print(result);
+        }
+        else if(lines.length == 3){
+            result=parseInt(lines[0])*parseInt(lines[1])*parseInt(lines[2]);
+            print(result);
+        }
+    }
+</script>
+<script>
+    //正确：
+    while(line=readline()){
+        var lines = line.split(' ');
+        var result2=0;
+        var result1=0;
+        if(lines.length>3){
+            lines.sort(function(a,b){
+                return a-b;
+            });
+            result1=parseInt(lines[0])*parseInt(lines[1])*parseInt(lines[lines.length-1]);
+            result2=parseInt(lines[lines.length-1])*parseInt(lines[lines.length-2])*parseInt(lines[lines.length-3]);
+            print(Math.max(result1,result2));
+        }
+        else if(lines.length == 3){
+            result=parseInt(lines[0])*parseInt(lines[1])*parseInt(lines[2]);
+            print(result);
+        }
+    }
+</script>
+</body>
+</html>

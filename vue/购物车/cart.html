@@ -11,6 +11,7 @@
             border-collapse: collapse;
         }
     </style>
+    <script src="jquery-1.12.4.js"></script>
 </head>
 <body>
 <div id="cart">
@@ -109,6 +110,7 @@
 
         function changeTotal(){
             var $aBox = $(':checked');
+            console.log($aBox)
             var totalPrice = 0;
             $aBox.each(function(index,elem){
                 totalPrice += parseInt($(this).parents('tr').find('.total-price').text());
