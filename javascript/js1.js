@@ -7,3 +7,5 @@ if(year%400==0){
     Document.write("该年份是闰年");
         }
 Document.write("该年份是闰年");
+
+
